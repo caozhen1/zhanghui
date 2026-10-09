@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><base href="/app/app_17fd0gt2wdd/"><script src="https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js" crossorigin="anonymous"></script><script>if(window.Slardar){Slardar("context.merge",{app_id:"app_17fd0gt2wdd",user_id:"",tenant_id:"4963675874",app_type:"9",arch_type:"4"});Slardar("init",{bid:"apaas_miaoda",env:"online"});Slardar("start")}</script><script>(function(e,t){e.LogAnalyticsObject=t;if(!e[t]){function c(){c.q.push(arguments)}c.q=[];e[t]=c}e[t].l=+new Date})(window,"collectEvent");var s=document.createElement("script");s.src="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js";s.crossOrigin="anonymous";s.async=true;s.onerror=function(){console.warn("Failed to load Tea script")};document.head.appendChild(s)</script><script src="https://lf3-cdn-tos.bytescm.com/obj/static/log-sdk/collect/5.1/collect.js" crossorigin="anonymous" async=""></script><script>window.appId="app_17fd0gt2wdd";window.userId="";window.tenantId="4963675874";window.csrfToken="498feba188c354b39e79dfa2be848c39cba7a1ee3d17957419f1d7c863d3af62";window.appEnv="runtime";globalThis.CLIENT_BASE_PATH="/app/app_17fd0gt2wdd";globalThis.ENVIRONMENT="online"</script><script>"use strict";var MiaodaRuntime=(()=>{var Oe=Object.create;var B=Object.defineProperty;var Re=Object.getOwnPropertyDescriptor;var Be=Object.getOwnPropertyNames;var He=Object.getPrototypeOf,Fe=Object.prototype.hasOwnProperty;var i=(t,e)=>B(t,"name",{value:e,configurable:!0});var V=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),De=(t,e)=>{for(var o in e)B(t,o,{get:e[o],enumerable:!0})},q=(t,e,o,u)=>{if(e&&typeof e=="object"||typeof e=="function")for(let f of Be(e))!Fe.call(t,f)&&f!==o&&B(t,f,{get:()=>e[f],enumerable:!(u=Re(e,f))||u.enumerable});return t};var Y=(t,e,o)=>(o=t!=null?Oe(He(t)):{},q(e||!t||!t.__esModule?B(o,"default",{value:t,enumerable:!0}):o,t)),Ne=t=>q(B({},"__esModule",{value:!0}),t);var ee=V((Q,H)=>{"use strict";(function(t){"use strict";function e(n,h){var r=(n&65535)+(h&65535),b=(n>>16)+(h>>16)+(r>>16);return b<<16|r&65535}i(e,"safeAdd");function o(n,h){return n<<h|n>>>32-h}i(o,"bitRotateLeft");function u(n,h,r,b,C,S){return e(o(e(e(h,n),e(b,S)),C),r)}i(u,"md5cmn");function f(n,h,r,b,C,S,A){return u(h&r|~h&b,n,h,C,S,A)}i(f,"md5ff");function m(n,h,r,b,C,S,A){return u(h&b|r&~b,n,h,C,S,A)}i(m,"md5gg");function g(n,h,r,b,C,S,A){return u(h^r^b,n,h,C,S,A)}i(g,"md5hh");function v(n,h,r,b,C,S,A){return u(r^(h|~b),n,h,C,S,A)}i(v,"md5ii");function y(n,h){n[h>>5]|=128<<h%32,n[(h+64>>>9<<4)+14]=h;var r,b,C,S,A,a=1732584193,s=-271733879,c=-1732584194,l=271733878;for(r=0;r<n.length;r+=16)b=a,C=s,S=c,A=l,a=f(a,s,c,l,n[r],7,-680876936),l=f(l,a,s,c,n[r+1],12,-389564586),c=f(c,l,a,s,n[r+2],17,606105819),s=f(s,c,l,a,n[r+3],22,-1044525330),a=f(a,s,c,l,n[r+4],7,-176418897),l=f(l,a,s,c,n[r+5],12,1200080426),c=f(c,l,a,s,n[r+6],17,-1473231341),s=f(s,c,l,a,n[r+7],22,-45705983),a=f(a,s,c,l,n[r+8],7,1770035416),l=f(l,a,s,c,n[r+9],12,-1958414417),c=f(c,l,a,s,n[r+10],17,-42063),s=f(s,c,l,a,n[r+11],22,-1990404162),a=f(a,s,c,l,n[r+12],7,1804603682),l=f(l,a,s,c,n[r+13],12,-40341101),c=f(c,l,a,s,n[r+14],17,-1502002290),s=f(s,c,l,a,n[r+15],22,1236535329),a=m(a,s,c,l,n[r+1],5,-165796510),l=m(l,a,s,c,n[r+6],9,-1069501632),c=m(c,l,a,s,n[r+11],14,643717713),s=m(s,c,l,a,n[r],20,-373897302),a=m(a,s,c,l,n[r+5],5,-701558691),l=m(l,a,s,c,n[r+10],9,38016083),c=m(c,l,a,s,n[r+15],14,-660478335),s=m(s,c,l,a,n[r+4],20,-405537848),a=m(a,s,c,l,n[r+9],5,568446438),l=m(l,a,s,c,n[r+14],9,-1019803690),c=m(c,l,a,s,n[r+3],14,-187363961),s=m(s,c,l,a,n[r+8],20,1163531501),a=m(a,s,c,l,n[r+13],5,-1444681467),l=m(l,a,s,c,n[r+2],9,-51403784),c=m(c,l,a,s,n[r+7],14,1735328473),s=m(s,c,l,a,n[r+12],20,-1926607734),a=g(a,s,c,l,n[r+5],4,-378558),l=g(l,a,s,c,n[r+8],11,-2022574463),c=g(c,l,a,s,n[r+11],16,1839030562),s=g(s,c,l,a,n[r+14],23,-35309556),a=g(a,s,c,l,n[r+1],4,-1530992060),l=g(l,a,s,c,n[r+4],11,1272893353),c=g(c,l,a,s,n[r+7],16,-155497632),s=g(s,c,l,a,n[r+10],23,-1094730640),a=g(a,s,c,l,n[r+13],4,681279174),l=g(l,a,s,c,n[r],11,-358537222),c=g(c,l,a,s,n[r+3],16,-722521979),s=g(s,c,l,a,n[r+6],23,76029189),a=g(a,s,c,l,n[r+9],4,-640364487),l=g(l,a,s,c,n[r+12],11,-421815835),c=g(c,l,a,s,n[r+15],16,530742520),s=g(s,c,l,a,n[r+2],23,-995338651),a=v(a,s,c,l,n[r],6,-198630844),l=v(l,a,s,c,n[r+7],10,1126891415),c=v(c,l,a,s,n[r+14],15,-1416354905),s=v(s,c,l,a,n[r+5],21,-57434055),a=v(a,s,c,l,n[r+12],6,1700485571),l=v(l,a,s,c,n[r+3],10,-1894986606),c=v(c,l,a,s,n[r+10],15,-1051523),s=v(s,c,l,a,n[r+1],21,-2054922799),a=v(a,s,c,l,n[r+8],6,1873313359),l=v(l,a,s,c,n[r+15],10,-30611744),c=v(c,l,a,s,n[r+6],15,-1560198380),s=v(s,c,l,a,n[r+13],21,1309151649),a=v(a,s,c,l,n[r+4],6,-145523070),l=v(l,a,s,c,n[r+11],10,-1120210379),c=v(c,l,a,s,n[r+2],15,718787259),s=v(s,c,l,a,n[r+9],21,-343485551),a=e(a,b),s=e(s,C),c=e(c,S),l=e(l,A);return[a,s,c,l]}i(y,"binlMD5");function T(n){var h,r="",b=n.length*32;for(h=0;h<b;h+=8)r+=String.fromCharCode(n[h>>5]>>>h%32&255);return r}i(T,"binl2rstr");function x(n){var h,r=[];for(r[(n.length>>2)-1]=void 0,h=0;h<r.length;h+=1)r[h]=0;var b=n.length*8;for(h=0;h<b;h+=8)r[h>>5]|=(n.charCodeAt(h/8)&255)<<h%32;return r}i(x,"rstr2binl");function I(n){return T(y(x(n),n.length*8))}i(I,"rstrMD5");function E(n,h){var r,b=x(n),C=[],S=[],A;for(C[15]=S[15]=void 0,b.length>16&&(b=y(b,n.length*8)),r=0;r<16;r+=1)C[r]=b[r]^909522486,S[r]=b[r]^1549556828;return A=y(C.concat(x(h)),512+h.length*8),T(y(S.concat(A),640))}i(E,"rstrHMACMD5");function P(n){var h="0123456789abcdef",r="",b,C;for(C=0;C<n.length;C+=1)b=n.charCodeAt(C),r+=h.charAt(b>>>4&15)+h.charAt(b&15);return r}i(P,"rstr2hex");function L(n){return unescape(encodeURIComponent(n))}i(L,"str2rstrUTF8");function d(n){return I(L(n))}i(d,"rawMD5");function p(n){return P(d(n))}i(p,"hexMD5");function w(n,h){return E(L(n),L(h))}i(w,"rawHMACMD5");function _(n,h){return P(w(n,h))}i(_,"hexHMACMD5");function k(n,h,r){return h?r?w(h,n):_(h,n):r?d(n):p(n)}i(k,"md5"),typeof define=="function"&&define.amd?define(function(){return k}):typeof H=="object"&&H.exports?H.exports=k:t.md5=k})(Q)});var ne=V((F,te)=>{"use strict";(function(t,e){typeof F=="object"?te.exports=F=e():typeof define=="function"&&define.amd?define([],e):t.CryptoJS=e()})(F,function(){var t=t||(function(e,o){var u=Object.create||(function(){function d(){}return i(d,"F"),function(p){var w;return d.prototype=p,w=new d,d.prototype=null,w}})(),f={},m=f.lib={},g=m.Base=(function(){return{extend:i(function(d){var p=u(this);return d&&p.mixIn(d),(!p.hasOwnProperty("init")||this.init===p.init)&&(p.init=function(){p.$super.init.apply(this,arguments)}),p.init.prototype=p,p.$super=this,p},"extend"),create:i(function(){var d=this.extend();return d.init.apply(d,arguments),d},"create"),init:i(function(){},"init"),mixIn:i(function(d){for(var p in d)d.hasOwnProperty(p)&&(this[p]=d[p]);d.hasOwnProperty("toString")&&(this.toString=d.toString)},"mixIn"),clone:i(function(){return this.init.prototype.extend(this)},"clone")}})(),v=m.WordArray=g.extend({init:i(function(d,p){d=this.words=d||[],p!=o?this.sigBytes=p:this.sigBytes=d.length*4},"init"),toString:i(function(d){return(d||T).stringify(this)},"toString"),concat:i(function(d){var p=this.words,w=d.words,_=this.sigBytes,k=d.sigBytes;if(this.clamp(),_%4)for(var n=0;n<k;n++){var h=w[n>>>2]>>>24-n%4*8&255;p[_+n>>>2]|=h<<24-(_+n)%4*8}else for(var n=0;n<k;n+=4)p[_+n>>>2]=w[n>>>2];return this.sigBytes+=k,this},"concat"),clamp:i(function(){var d=this.words,p=this.sigBytes;d[p>>>2]&=4294967295<<32-p%4*8,d.length=e.ceil(p/4)},"clamp"),clone:i(function(){var d=g.clone.call(this);return d.words=this.words.slice(0),d},"clone"),random:i(function(d){for(var p=[],w=i(function(r){var r=r,b=987654321,C=4294967295;return function(){b=36969*(b&65535)+(b>>16)&C,r=18e3*(r&65535)+(r>>16)&C;var S=(b<<16)+r&C;return S/=4294967296,S+=.5,S*(e.random()>.5?1:-1)}},"r"),_=0,k;_<d;_+=4){var n=w((k||e.random())*4294967296);k=n()*987654071,p.push(n()*4294967296|0)}return new v.init(p,d)},"random")}),y=f.enc={},T=y.Hex={stringify:i(function(d){for(var p=d.words,w=d.sigBytes,_=[],k=0;k<w;k++){var n=p[k>>>2]>>>24-k%4*8&255;_.push((n>>>4).toString(16)),_.push((n&15).toString(16))}return _.join("")},"stringify"),parse:i(function(d){for(var p=d.length,w=[],_=0;_<p;_+=2)w[_>>>3]|=parseInt(d.substr(_,2),16)<<24-_%8*4;return new v.init(w,p/2)},"parse")},x=y.Latin1={stringify:i(function(d){for(var p=d.words,w=d.sigBytes,_=[],k=0;k<w;k++){var n=p[k>>>2]>>>24-k%4*8&255;_.push(String.fromCharCode(n))}return _.join("")},"stringify"),parse:i(function(d){for(var p=d.length,w=[],_=0;_<p;_++)w[_>>>2]|=(d.charCodeAt(_)&255)<<24-_%4*8;return new v.init(w,p)},"parse")},I=y.Utf8={stringify:i(function(d){try{return decodeURIComponent(escape(x.stringify(d)))}catch{throw new Error("Malformed UTF-8 data")}},"stringify"),parse:i(function(d){return x.parse(unescape(encodeURIComponent(d)))},"parse")},E=m.BufferedBlockAlgorithm=g.extend({reset:i(function(){this._data=new v.init,this._nDataBytes=0},"reset"),_append:i(function(d){typeof d=="string"&&(d=I.parse(d)),this._data.concat(d),this._nDataBytes+=d.sigBytes},"_append"),_process:i(function(d){var p=this._data,w=p.words,_=p.sigBytes,k=this.blockSize,n=k*4,h=_/n;d?h=e.ceil(h):h=e.max((h|0)-this._minBufferSize,0);var r=h*k,b=e.min(r*4,_);if(r){for(var C=0;C<r;C+=k)this._doProcessBlock(w,C);var S=w.splice(0,r);p.sigBytes-=b}return new v.init(S,b)},"_process"),clone:i(function(){var d=g.clone.call(this);return d._data=this._data.clone(),d},"clone"),_minBufferSize:0}),P=m.Hasher=E.extend({cfg:g.extend(),init:i(function(d){this.cfg=this.cfg.extend(d),this.reset()},"init"),reset:i(function(){E.reset.call(this),this._doReset()},"reset"),update:i(function(d){return this._append(d),this._process(),this},"update"),finalize:i(function(d){d&&this._append(d);var p=this._doFinalize();return p},"finalize"),blockSize:512/32,_createHelper:i(function(d){return function(p,w){return new d.init(w).finalize(p)}},"_createHelper"),_createHmacHelper:i(function(d){return function(p,w){return new L.HMAC.init(d,w).finalize(p)}},"_createHmacHelper")}),L=f.algo={};return f})(Math);return t})});var ie=V((D,re)=>{"use strict";(function(t,e){typeof D=="object"?re.exports=D=e(ne()):typeof define=="function"&&define.amd?define(["./core"],e):e(t.CryptoJS)})(D,function(t){return(function(){var e=t,o=e.lib,u=o.WordArray,f=o.Hasher,m=e.algo,g=[],v=m.SHA1=f.extend({_doReset:i(function(){this._hash=new u.init([1732584193,4023233417,2562383102,271733878,3285377520])},"_doReset"),_doProcessBlock:i(function(y,T){for(var x=this._hash.words,I=x[0],E=x[1],P=x[2],L=x[3],d=x[4],p=0;p<80;p++){if(p<16)g[p]=y[T+p]|0;else{var w=g[p-3]^g[p-8]^g[p-14]^g[p-16];g[p]=w<<1|w>>>31}var _=(I<<5|I>>>27)+d+g[p];p<20?_+=(E&P|~E&L)+1518500249:p<40?_+=(E^P^L)+1859775393:p<60?_+=(E&P|E&L|P&L)-1894007588:_+=(E^P^L)-899497514,d=L,L=P,P=E<<30|E>>>2,E=I,I=_}x[0]=x[0]+I|0,x[1]=x[1]+E|0,x[2]=x[2]+P|0,x[3]=x[3]+L|0,x[4]=x[4]+d|0},"_doProcessBlock"),_doFinalize:i(function(){var y=this._data,T=y.words,x=this._nDataBytes*8,I=y.sigBytes*8;return T[I>>>5]|=128<<24-I%32,T[(I+64>>>9<<4)+14]=Math.floor(x/4294967296),T[(I+64>>>9<<4)+15]=x,y.sigBytes=T.length*4,this._process(),this._hash},"_doFinalize"),clone:i(function(){var y=f.clone.call(this);return y._hash=this._hash.clone(),y},"clone")});e.SHA1=f._createHelper(v),e.HmacSHA1=f._createHmacHelper(v)})(),t.SHA1})});var wt={};De(wt,{TrackKey:()=>G,name:()=>yt,reportTeaEvent:()=>K,version:()=>bt});var le=Y(ee(),1),de=Y(ie(),1);function M(){return window.appId||null}i(M,"getAppId");function N(){var o;let t="suda-csrf-token",e=document.cookie.split("; ");for(let u of e){let[f,m]=u.split("=");if(f===t)return decodeURIComponent(m)}return(o=window.csrfToken)!=null?o:null}i(N,"getCsrfToken");function $(){let t=globalThis.CLIENT_BASE_PATH||"/";return/^\/app\/[^/]/.test(t)}i($,"isNewPathEnabled");function j(){switch(globalThis.ENVIRONMENT){case"gray":return"PRE";case"online":return"ONLINE";default:return"BOE"}}i(j,"getEnv");function oe(){return window.appEnv!=null?window.appEnv==="runtime":!0}i(oe,"isOnlineEnv");function W(){let t=navigator.userAgent,e=/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(t),o=/iPad|Tab|Tablet/i.test(t)&&navigator.maxTouchPoints>1;return e||o}i(W,"isMobile");async function ae(){var t,e,o;try{let u=M();if(!u)return!0;let f=$()?`/app/${u}/__runtime__/api/v1/studio/get_published`:`/spark/b/${u}/get_published`,g=await(await fetch(f,{headers:{"X-Suda-Csrf-Token":(t=N())!=null?t:""}})).json();if(g.code===0||g.status_code==="0")return((o=(e=g.data)==null?void 0:e.app_info)==null?void 0:o.show_badge)!==!1}catch{}return!0}i(ae,"fetchShowBadge");async function se(){var u;let t=M();if(!t)return{code:1,msg:"appId is required",data:{}};let e=$()?`/app/${t}/__runtime__/api/v1/studio/lark/user_info`:`/spark/b/${t}/lark/user_info`;return await(await fetch(e,{headers:{"X-Suda-Csrf-Token":(u=N())!=null?u:""}})).json()}i(se,"getLarkUserInfo");var G={VIEW:"aily_agent_artifact_page_view"},$e="08a441",je="42b91e";function ce(t){let e=String(t);return(0,de.default)($e+(0,le.default)(e+je)).toString()}i(ce,"encryptTea");var z=!1;async function We(){var m,g,v,y;let{data:t}=await se(),{tenantID:e,userID:o}=t||{},u=o&&o!=="0"?ce(o):void 0,f=e&&e!=="0"?ce(e):void 0;(m=window.collectEvent)==null||m.call(window,"init",{app_id:788827,channel:"cn",disable_auto_pv:!1,enable_ab_test:!1,enable_debug:!1,enable_stay_duration:!0,reportTime:1e3}),(v=window.collectEvent)==null||v.call(window,"config",{user_unique_id:u,device_type:W()?"mobile":"pc",evtParams:{open_from:(g=new URLSearchParams(window.location.search).get("open-from"))!=null?g:void 0,env:j(),user_id:u,tenant_id:f}}),z=!0,(y=window.collectEvent)==null||y.call(window,"start")}i(We,"createTracker");async function K({trackKey:t,trackParams:e={}}){var o;try{z||(z=!0,await We()),(o=window.collectEvent)==null||o.call(window,t,e)}catch(u){console.error(u)}}i(K,"reportTeaEvent");function ue(){return K({trackKey:G.VIEW,trackParams:{artifact_uid:M(),agent_id:"agent_miaoda",url:window.location.href}})}i(ue,"reportPageView");function fe(){if(typeof crypto!="undefined"&&crypto.getRandomValues){let e=new Uint8Array(8);return crypto.getRandomValues(e),Array.from(e).map(o=>o.toString(16).padStart(2,"0")).join("")}let t="";for(let e=0;e<16;e++)t+=Math.floor(Math.random()*16).toString(16);return t}i(fe,"generateUUID");var pe="x_sdk_device_id";function Ue(){try{let t=localStorage.getItem(pe);return t||(t=fe(),localStorage.setItem(pe,t)),t}catch{return fe()}}i(Ue,"getDeviceId");function Ve(){let t=typeof navigator!="undefined"?navigator.userAgent:"";return t&&(/Android/i.test(t)&&/Mobile/i.test(t)||/iPhone|iPod/i.test(t)||/BlackBerry|IEMobile|Opera Mini/i.test(t))?"mobile":"desktop"}i(Ve,"getDeviceType");var ze="pageSessionID";function Ge(){try{return new URLSearchParams(window.location.search).get(ze)||""}catch{return""}}i(Ge,"getPvId");function Ke(t={}){let e=t.pvId||Ge();return{app_id:window.appId||"",tenant_id:window.tenantId||"",user_id:window.userId||"",did:Ue(),module:"app_web",app_env:"runtime",source_type:"user",device_type:Ve(),release_commit_id:window.__RELEASE_COMMIT_ID__||"",...e?{pv_id:e}:{}}}i(Ke,"getDefaultAttributes");function he(t){let e=Math.round(t);if(!Number.isFinite(e))throw new RangeError(`toNanoString: \u975E\u6CD5\u65F6\u95F4\u6233 ${t}`);return typeof BigInt!="function"?e===0?"0":`${e}000000`:String(BigInt(e)*BigInt(1e6))}i(he,"toNanoString");var Ze="1.0.2";function Je(t,e){let o=Ke(e),u=he(Date.now());return{metricsData:{resource:{attributes:{sdk_version:Ze,sdk_lang:"javascript",sdk_type:"client-frontend"}},metrics:[{name:"apaas_internal_metrics_pv_uv",description:"Count of page views",unit:"",scopeName:"apaas_internal_metrics_pv_uv",sum:{aggregationTemporality:1,isMonotonic:!0,dataPoints:t.map(f=>({attributes:{...o,url:f.url,path:f.path,referrer:f.referrer},startTimeUnixNano:he(f.timestampMs),timeUnixNano:u,asDouble:1}))}}]}}}i(Je,"buildPayload");function Xe(t,e,o={},u){if(e.length===0)return;let f;try{f=JSON.stringify(Je(e,u))}catch{return}try{fetch(t,{method:"POST",headers:{"Content-Type":"application/json","X-Suda-Csrf-Token":window.csrfToken||"",...o},body:f,keepalive:!0}).catch(()=>{})}catch{}}i(Xe,"sendPvData");var Z="__APAAS_PV_TRACKER_STARTED__";function qe(){try{let t=window;return t[Z]?!1:(t[Z]=!0,!0)}catch{return!0}}i(qe,"claimPvReporting");function me(){try{window[Z]=!1}catch{}}i(me,"releasePvReporting");var O,Ye=(O=class{constructor(){this.started=!1,this.disposers=[],this.holdsPvReporting=!1,this.buffer=[]}static get instance(){return this._instance||(this._instance=new O),this._instance}start(e){var o;if(!this.started&&qe()){this.holdsPvReporting=!0,this.config=e,this.started=!0;try{this.listenRouteChanges(),this.registerLifecycleListeners();let u=(o=e.flushIntervalMs)!=null?o:1e4;this.flushTimer=setInterval(()=>this.flush(),u)}catch(u){throw this.started=!1,this.flushTimer&&(clearInterval(this.flushTimer),this.flushTimer=void 0),this.holdsPvReporting=!1,me(),u}}}shutdown(){this.flush(),this.flushTimer&&(clearInterval(this.flushTimer),this.flushTimer=void 0),this.firstFlushTimer&&(clearTimeout(this.firstFlushTimer),this.firstFlushTimer=void 0),this.started=!1;for(let e of this.disposers.splice(0))try{e()}catch{}this.holdsPvReporting&&(this.holdsPvReporting=!1,me())}pageKey(){let{origin:e,pathname:o,search:u}=window.location;return`${e}${o}${u}`}scheduleFirstFlush(){var e;let o=(e=this.config)==null?void 0:e.firstFlushDelayMs;o==null||this.firstFlushTimer||(this.firstFlushTimer=setTimeout(()=>this.flush(),o))}recordPv(){let e=this.pageKey();this.lastKey!==e&&(this.lastKey=e,this.buffer.push({url:window.location.href,path:window.location.pathname,referrer:document.referrer,timestampMs:Date.now()}),this.scheduleFirstFlush())}flush(){if(!this.config||this.buffer.length===0)return;let e=this.buffer.splice(0);Xe(this.config.collectorUrl,e,this.config.headers,{pvId:this.config.pvId})}listenRouteChanges(){this.recordPv();let e=i(()=>this.recordPv(),"onPopState");window.addEventListener("popstate",e),this.disposers.push(()=>window.removeEventListener("popstate",e)),this.patchHistory("pushState"),this.patchHistory("replaceState")}patchHistory(e){let o=history[e],u=i(()=>this.recordPv(),"recordPv");history[e]=function(...f){let m=o.apply(this,f);return u(),m},this.disposers.push(()=>{history[e]=o})}registerLifecycleListeners(){let e=i(()=>{document.visibilityState==="hidden"&&this.flush()},"onVisibilityChange");document.addEventListener("visibilitychange",e),this.disposers.push(()=>document.removeEventListener("visibilitychange",e));let o=i(()=>this.flush(),"onPageHide");window.addEventListener("pagehide",o),this.disposers.push(()=>window.removeEventListener("pagehide",o))}},i(O,"_PvTracker"),O),ge=Ye.instance;function ve(){var o;let t=(o=M())!=null?o:"",e=$()?`/app/${t}/__runtime__/api/v1/observability/metrics/collect`:`/spark/app/${t}/runtime/api/v1/observability/metrics/collect`;ge.start({collectorUrl:e})}i(ve,"initPvTracking");var Qe=/\bLark\//i;function _e(){var e,o,u,f;let t=window;return typeof((u=(o=(e=t.webkit)==null?void 0:e.messageHandlers)==null?void 0:o.invokeNative)==null?void 0:u.postMessage)=="function"||typeof((f=t.Lark_Bridge)==null?void 0:f.invokeNative)=="function"?!0:Qe.test(navigator.userAgent)}i(_e,"isFeishuClient");function be({messageIds:t,token:e,docType:o=113}){var v,y;if(t.length===0||!e)return!1;let u={apiName:"markMiaodaFeedMessagesRead",data:{__v2__:!0,messageIds:t.map(String),token:e,docType:o}},f=window,m=(y=(v=f.webkit)==null?void 0:v.messageHandlers)==null?void 0:y.invokeNative;if(m!=null&&m.postMessage)return m.postMessage(u),!0;let g=f.Lark_Bridge;return g!=null&&g.invokeNative?(g.invokeNative(JSON.stringify(u)),!0):!1}i(be,"markMiaodaFeedMessagesRead");var et=113,tt="/app/",nt="/__runtime__/api/v1/devops/read_lark_messages";function rt(t){if(!t||typeof t!="object")return[];let{data:e}=t;return Array.isArray(e)?e.map(String):e&&Array.isArray(e.message_ids)?e.message_ids.map(String):[]}i(rt,"extractMessageIds");var ye=!1;async function it(t){var u;let e=await fetch(`${tt}${t}${nt}`,{method:"POST",credentials:"same-origin",headers:{"Content-Type":"application/json","X-Suda-Csrf-Token":(u=N())!=null?u:""}});if(!e.ok)return[];let o=await e.json();return rt(o)}i(it,"fetchFeedMessageIds");async function we(){if(ye||!_e())return;ye=!0;let t=M();if(t)try{let e=await it(t);if(!e.length)return;be({messageIds:e,token:t,docType:et})}catch{}}i(we,"markFeedReadOnce");var xe="https://lf3-static.bytednsdoc.com/obj/eden-cn/LMfspH/ljhwZthlaukjlkulzlp",ot=`${xe}/miaoda-ui/doubao.svg`,at=`${xe}/logo/miaodalogo.svg`,ke='<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.08312 8.08298C8.2384 7.92769 8.23953 7.67705 8.08424 7.52176L5.3625 4.80002L8.08422 2.07829C8.23951 1.92301 8.23839 1.67236 8.0831 1.51708C7.92781 1.36179 7.67717 1.36066 7.52188 1.51595C7.36659 1.67124 4.80016 4.23767 4.80016 4.23767L2.07841 1.51593C1.92313 1.36064 1.67248 1.36177 1.5172 1.51705C1.36191 1.67234 1.36078 1.92298 1.51607 2.07827L4.23782 4.80002L1.51605 7.52178C1.36076 7.67707 1.36189 7.92771 1.51718 8.083C1.67246 8.23829 1.92311 8.23941 2.07839 8.08412L4.80016 5.36236L7.5219 8.0841C7.67719 8.23939 7.92783 8.23826 8.08312 8.08298Z" fill="currentColor"/></svg>',st='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.6667 2H3.33333V14H6.66667V15.3334H3.33333C2.59695 15.3334 2 14.7364 2 14V2C2 1.26364 2.59695 0.666687 3.33333 0.666687H12.6667C13.403 0.666687 14 1.26364 14 2V7.33335H12.6667V2Z" fill="currentColor"/><path d="M5.33333 4.66669C4.96514 4.66669 4.66667 4.96516 4.66667 5.33335C4.66667 5.70154 4.96514 6 5.33333 6H10.6667C11.0349 6 11.3333 5.70154 11.3333 5.33335C11.3333 4.96516 11.0349 4.66669 10.6667 4.66669H5.33333Z" fill="currentColor"/><path d="M4.66667 8.33335C4.66667 7.96516 4.96514 7.66669 5.33333 7.66669H8C8.36819 7.66669 8.66667 7.96516 8.66667 8.33335C8.66667 8.70154 8.36819 9 8 9H5.33333C4.96514 9 4.66667 8.70154 4.66667 8.33335Z" fill="currentColor"/><path d="M13.5523 8.70017C13.9428 8.30964 14.576 8.30964 14.9665 8.70017C15.357 9.09069 15.357 9.72386 14.9665 10.1144L14.2594 10.8215L12.8452 9.40728L13.5523 8.70017Z" fill="currentColor"/><path d="M12.1381 10.1144L13.5523 11.5286L10.2309 14.85C10.0916 14.9892 9.91229 15.0815 9.71798 15.1138L8.45737 15.3234C8.42136 15.3294 8.38467 15.3177 8.35885 15.2918C8.33271 15.2657 8.32099 15.2284 8.32749 15.192L8.55128 13.9374C8.58465 13.7502 8.6746 13.5779 8.80901 13.4435L12.1381 10.1144Z" fill="currentColor"/></svg>',ct='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.9922 1.99221C12.5445 1.98895 12.9958 2.43407 12.999 2.98634L13.0762 16.1943L14.6387 14.6328L17.8926 11.3789C18.2831 10.9884 18.9171 10.9885 19.3076 11.3789C19.6977 11.7695 19.6979 12.4026 19.3076 12.793L16.0527 16.0479L12.7979 19.3018C12.7111 19.3884 12.6098 19.4566 12.5 19.5059H20.375C20.9271 19.5059 21.3748 19.9538 21.375 20.5059C21.375 21.0581 20.9273 21.5059 20.375 21.5059H3.625C3.07272 21.5059 2.625 21.0581 2.625 20.5059C2.62523 19.9538 3.07286 19.5059 3.625 19.5059H11.6816C11.572 19.4566 11.4704 19.3884 11.3838 19.3018L4.87402 12.793C4.48372 12.4026 4.4839 11.7694 4.87402 11.3789C5.26452 10.9884 5.89756 10.9885 6.28809 11.3789L11.0762 16.166L10.999 2.99806C10.9958 2.44603 11.4402 1.99582 11.9922 1.99221Z" fill="currentColor"/></svg>',lt='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.0754 7.57153C2.23188 9.44922 3.49231 11.053 5.27982 11.6488C5.31351 11.6601 5.33994 11.6865 5.35117 11.7202L5.72076 12.8289C5.88752 13.3292 6.3557 13.6667 6.88304 13.6667H9.11696C9.6443 13.6667 10.1125 13.3292 10.2792 12.8289L10.6488 11.7202C10.6601 11.6865 10.6865 11.6601 10.7202 11.6488C12.5077 11.053 13.7681 9.44922 13.9246 7.57153L14 6.66667C14 3.35296 11.3137 0.666668 8 0.666668C4.68629 0.666668 2 3.35296 2 6.66667L2.0754 7.57153ZM9.38392 11.2985L9.03899 12.3333H6.96101L6.61608 11.2985C6.47214 10.8667 6.13328 10.5279 5.70146 10.3839C4.41995 9.95675 3.51631 8.80696 3.40413 7.4608L3.33362 6.61462C3.36152 4.06127 5.44004 2 8 2C10.56 2 12.6385 4.06127 12.6664 6.61462L12.5959 7.4608C12.4837 8.80696 11.5801 9.95675 10.2985 10.3839C9.86672 10.5279 9.52786 10.8667 9.38392 11.2985Z" fill="currentColor"/><path d="M6.66667 14.3333C6.29848 14.3333 6 14.6318 6 15C6 15.3682 6.29848 15.6667 6.66667 15.6667H9.33333C9.70152 15.6667 10 15.3682 10 15C10 14.6318 9.70152 14.3333 9.33333 14.3333H6.66667Z" fill="currentColor"/><path d="M8.00864 4.13208L5.44578 6.94049C5.20258 7.18228 5.37835 7.56531 5.74361 7.58951L7.2181 7.6872L7.21814 9.60852C7.21814 9.96788 7.72139 10.1366 7.99168 9.86792C8.26197 9.59921 10.5545 7.05951 10.5545 7.05951C10.7977 6.81772 10.622 6.43469 10.2567 6.41049L8.78222 6.3128L8.78219 4.39148C8.78218 4.03212 8.27893 3.86336 8.00864 4.13208Z" fill="currentColor"/></svg>',Se=!0,dt="0px 8px 32px rgba(0,0,0,0.08), 0px 4px 16px rgba(0,0,0,0.04), 0px 2px 4px rgba(0,0,0,0.02)",ut="0px 4px 16px rgba(0,0,0,0.03), 0px 4px 10px rgba(0,0,0,0.03), 0px 2px 4px rgba(0,0,0,0.02)",X="'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif",U={doubao:{brandText:"\u8C46\u5305\u5DE5\u4F5C\u751F\u6210",logoSrc:ot,downloadUrl:"https://ugapk.com/FCtLH"},miaoda:{brandText:"\u5999\u642D\u751F\u6210",logoSrc:at,landingUrl:"https://miaoda.feishu.cn/landing"}},ft={BOE:"tns.feishu-boe.cn",PRE:"tns.feishu-pre.cn",ONLINE:"tns.feishu.cn"};function Ee(){var o;let t=JSON.stringify({scene:"miaoda_app_report",entity_id:(o=M())!=null?o:"",entity_type:"miaoda_app",extra:""}),e=`https://${ft[j()]}/cust/lark_report/?type=common&params=${encodeURIComponent(t)}&lang=zh-CN`;window.open(e,"_blank","noopener,noreferrer")}i(Ee,"openReport");var pt={feedback:st,close:ke,download:ct,efficiency:lt};function Ie(t){let e=document.createElement("span");Object.assign(e.style,{display:"inline-flex",width:`${t}px`,height:`${t}px`,flexShrink:"0"}),e.innerHTML=ke;let o=e.firstElementChild;return o&&(o.setAttribute("width",String(t)),o.setAttribute("height",String(t)),o.style.display="block"),e}i(Ie,"makeCloseIcon");function ht(t,e=16){if(t==="close")return Ie(e);let o=document.createElement("span");Object.assign(o.style,{display:"inline-flex",width:`${e}px`,height:`${e}px`,flexShrink:"0"}),o.innerHTML=pt[t];let u=o.firstElementChild;return u&&(u.style.display="block"),o}i(ht,"makeIcon");function mt(t,e){let o=document.createElement("img");return o.src=t,o.width=e,o.height=e,o.alt="",Object.assign(o.style,{width:`${e}px`,height:`${e}px`,maxWidth:"none",maxHeight:"none",borderRadius:"100px",flexShrink:"0",display:"block"}),o}i(mt,"makeLogo");function Le(t,e,o){let u=e==="desktop",f=U[t],m=document.createElement("div");Object.assign(m.style,{boxSizing:"border-box",display:"inline-flex",alignItems:"center",gap:"4px",padding:u?"6px 12px 6px 8px":"5px 12px 5px 8px",background:"#363636",border:"0.5px solid rgba(255,255,255,0.1)",borderRadius:"100px",boxShadow:dt,cursor:"pointer"});let g=mt(f.logoSrc,16),v=document.createElement("span");if(v.textContent=f.brandText,Object.assign(v.style,{fontFamily:X,fontSize:u?"12px":"14px",lineHeight:u?"18px":"22px",color:"rgba(255,255,255,0.85)",whiteSpace:"nowrap"}),m.append(g,v),u&&o){let y=document.createElement("span");y.setAttribute("role","button"),y.setAttribute("aria-label","\u5173\u95ED"),y.setAttribute("data-watermark-close",""),Object.assign(y.style,{display:"none",alignItems:"center",cursor:"pointer",flexShrink:"0",color:"rgba(255,255,255,0.5)"}),y.appendChild(Ie(10)),y.addEventListener("click",T=>{T.stopPropagation(),o()}),m.appendChild(y)}return m}i(Le,"buildPill");function R(t){let e=document.createElement("div");e.setAttribute("role","menuitem"),e.setAttribute("data-label",t.label),Object.assign(e.style,{boxSizing:"border-box",display:"flex",alignItems:"center",gap:"8px",minHeight:"38px",padding:"4px 10px",borderRadius:"6px",cursor:"pointer",color:"#000000"});let o=document.createElement("span");Object.assign(o.style,{display:"inline-flex",width:"16px",height:"16px",flexShrink:"0",color:"#000000"}),o.appendChild(ht(t.icon));let u=document.createElement("span");return u.textContent=t.label,Object.assign(u.style,{fontFamily:X,fontSize:`${t.fontSize}px`,lineHeight:`${t.fontSize+8}px`,color:"#000000",whiteSpace:"nowrap"}),e.append(o,u),e.addEventListener("mouseenter",()=>{e.style.background="rgba(0,0,0,0.04)"}),e.addEventListener("mouseleave",()=>{e.style.background="transparent"}),e.addEventListener("click",t.onClick),e}i(R,"buildMenuRow");function gt(){let t=document.createElement("div");return Object.assign(t.style,{height:"1px",background:"rgba(0,0,0,0.08)",margin:"0 10px"}),t}i(gt,"buildDivider");function Te(t){var o;let e=document.createElement("div");if(Object.assign(e.style,{boxSizing:"border-box",display:"flex",flexDirection:"column",minWidth:`${t.minWidth}px`,background:"#ffffff",border:"0.5px solid rgba(0,0,0,0.1)",borderRadius:"10px",boxShadow:ut,overflow:"hidden",outline:"none"}),t.items.length){let u=document.createElement("div");Object.assign(u.style,{boxSizing:"border-box",padding:"4px",display:"flex",flexDirection:"column",gap:`${(o=t.itemGap)!=null?o:0}px`}),t.items.forEach(f=>u.appendChild(f)),e.appendChild(u)}if(t.extraItems&&t.extraItems.length){e.appendChild(gt());let u=document.createElement("div");Object.assign(u.style,{boxSizing:"border-box",padding:"4px"}),t.extraItems.forEach(f=>u.appendChild(f)),e.appendChild(u)}return e}i(Te,"buildMenuCard");function Ae(t,e=!1){let o=document.createElement("div");o.setAttribute("data-custom-element",`${t}-watermark${e?"-mobile":""}`);let u=o.attachShadow({mode:"open"}),f=document.createElement("style");f.textContent=`
+    :host {
+      all: initial !important;
+      display: block !important;
+      position: fixed !important;
+      right: 12px !important;
+      bottom: 12px !important;
+      z-index: 9999 !important;
+      direction: ltr !important;
+      unicode-bidi: isolate !important;
+    }
+    :host::before, :host::after { content: none !important; }
+    .watermark-root {
+      all: initial;
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-family: ${X};
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+    }
+  `;let m=document.createElement("div");return m.className="watermark-root",u.append(f,m),{host:o,container:m}}i(Ae,"createWatermarkRoot");function vt(t){let{host:e,container:o}=Ae(t),u=[];t==="doubao"?u.push(R({icon:"download",label:"\u4E0B\u8F7D\u8C46\u5305\u5DE5\u4F5C",fontSize:14,onClick:i(()=>window.open(U.doubao.downloadUrl,"_blank","noopener,noreferrer"),"onClick")})):u.push(R({icon:"efficiency",label:"\u4E86\u89E3\u5999\u642D",fontSize:14,onClick:i(()=>window.open(U.miaoda.landingUrl,"_blank","noopener,noreferrer"),"onClick")})),Se&&u.push(R({icon:"feedback",label:"\u6295\u8BC9\u4E0E\u4E3E\u62A5",fontSize:14,onClick:Ee}));let f=Te({items:u,minWidth:160,itemGap:8});f.style.display="none";let m=Le(t,"desktop",()=>e.remove()),g=m.querySelector("[data-watermark-close]");o.append(f,m);let v=null;return o.addEventListener("mouseenter",()=>{v&&clearTimeout(v),f.style.display="flex",g&&(g.style.display="inline-flex")}),o.addEventListener("mouseleave",()=>{v=setTimeout(()=>{f.style.display="none",g&&(g.style.display="none")},100)}),e}i(vt,"buildDesktopWatermark");function _t(t){let{host:e,container:o}=Ae(t,!0);o.style.cursor="pointer";let u=[];t==="miaoda"&&u.push(R({icon:"efficiency",label:"\u4E86\u89E3\u5999\u642D",fontSize:16,onClick:i(()=>window.open(U.miaoda.landingUrl,"_blank","noopener,noreferrer"),"onClick")})),Se&&u.push(R({icon:"feedback",label:"\u6295\u8BC9\u4E0E\u4E3E\u62A5",fontSize:16,onClick:Ee}));let f=[R({icon:"close",label:"\u4E0D\u518D\u5C55\u793A",fontSize:16,onClick:i(y=>{y.stopPropagation(),document.removeEventListener("click",v),e.remove()},"onClick")})],m=Te({items:u,extraItems:f,minWidth:160});m.style.display="none";let g=Le(t,"mobile");o.append(m,g),o.addEventListener("click",y=>{y.stopPropagation(),m.style.display=m.style.display==="none"?"flex":"none"});let v=i(()=>{m.style.display="none"},"onOutsideClick");return document.addEventListener("click",v),e}i(_t,"buildMobileWatermark");var Ce=!1,J=!1;async function Pe(t){if(Ce||J||typeof document=="undefined")return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",()=>Pe(t),{once:!0});return}J=!0;let e=await ae();if(Ce=!0,J=!1,!e)return;let o=W()?_t(t):vt(t);document.body.appendChild(o)}i(Pe,"mountWatermark");function Me(){return Pe("doubao")}i(Me,"mountDoubaoWatermark");var bt="0.0.1",yt="@lark-apaas/miaoda-coding-sdk";oe()&&(ue(),ve());Me();we();return Ne(wt);})();
+</script><meta property="og:title" content="index_work"><meta property="og:image" content="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylcylz_fsph_ryhs/ljhwZthlaukjlkulzlp/feisuda/avatar/6.svg"><link rel="icon" href="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylcylz_fsph_ryhs/ljhwZthlaukjlkulzlp/feisuda/avatar/6.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《“蓝领高薪”的后半句》——招聘宣传与劳动者叙事的落差</title>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=Ma+Shan+Zheng&amp;display=swap">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js" integrity="sha384-pPi0zxBAoDu6+JXW/C68UZLvBUUtU+7zonhif43rqj7pxsGyqyqzcian2Rj37Rss" crossorigin="anonymous"></script>
+<style>
+:root{
+  --paper:#F1EFE8;        /* 米白纸卡 */
+  --paper-2:#E9E7DF;      /* 深一档纸 */
+  --paper-3:#E2DFD4;      /* 卡片底 */
+  --ink:#26241E;          /* 墨黑 */
+  --ink-2:#474339;        /* 次墨 */
+  --muted:#847E6E;        /* 灰 */
+  --rule:#D6D1C1;         /* 细线 */
+  --red:#A6543F;          /* 写实砖红（招工红纸/红章） */
+  --red-deep:#84402E;     /* 深砖红 */
+  --red-soft:#ECE0D6;     /* 浅砖红底 */
+  --charcoal:#2C2A24;     /* 黑板 */
+  --slate:#6B7D83;        /* 钢蓝灰（官方基准） */
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Noto Serif SC",serif;
+  color:var(--ink);line-height:1.85;
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(circle at 18% 12%,rgba(80,80,70,.035),transparent 45%),
+    radial-gradient(circle at 82% 68%,rgba(80,80,70,.04),transparent 50%);
+  background-attachment:fixed;
+}
+/* 纸张颗粒 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0.2 0 0 0 0 0.18 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+[contenteditable]{outline:none;}
+[contenteditable]:focus{background:rgba(166,84,63,.08);box-shadow:inset 0 0 0 1px rgba(166,84,63,.4);border-radius:3px;}
+img{user-select:none;}
+
+/* ============ 报头（Hero） ============ */
+.hero{position:relative;min-height:94vh;display:flex;flex-direction:column;justify-content:center;
+  padding:64px 0 40px;overflow:hidden;
+  border-bottom:3px double var(--ink);}
+.hero .ph{position:absolute;inset:0;}
+.hero .ph img{width:100%;height:100%;object-fit:cover;opacity:.42;filter:saturate(.72) contrast(.98);}
+.hero .ph::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(241,239,232,.38) 0%,rgba(241,239,232,.22) 42%,rgba(241,239,232,.8) 100%);}
+.hero .inner{position:relative;z-index:2;}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-bottom:16px;margin-bottom:26px;border-bottom:1px solid var(--ink);}
+.masthead .org{font-family:"Noto Sans SC",sans-serif;font-size:13px;letter-spacing:3px;color:var(--ink-2);}
+.masthead .date{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);letter-spacing:1px;}
+.kicker{font-family:"Noto Sans SC",sans-serif;font-size:13px;letter-spacing:5px;color:var(--red);margin-bottom:20px;}
+.hero h1{font-size:60px;line-height:1.18;font-weight:900;color:var(--ink);letter-spacing:1px;margin-bottom:8px;}
+.hero h1 em{font-style:normal;color:var(--red);}
+.hero .sub{font-size:21px;font-weight:600;color:var(--ink-2);margin-bottom:24px;}
+.hero .lead{font-size:17px;color:var(--ink-2);max-width:820px;}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:42px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);}
+.kpi{padding:20px 18px;border-right:1px solid var(--rule);}
+.kpi:last-child{border-right:none;}
+.kpi .n{font-family:"Noto Serif SC",serif;font-size:34px;font-weight:900;line-height:1.1;color:var(--ink);}
+.kpi:nth-child(2) .n{color:var(--red);}
+.kpi .l{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.5;}
+
+/* ============ 章节头 ============ */
+section{padding:54px 0 6px;}
+.chap{display:flex;gap:22px;align-items:stretch;margin-bottom:30px;
+  padding-bottom:20px;border-bottom:2px solid var(--ink);}
+.chap .no{flex-shrink:0;width:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:1.5px solid var(--red);color:var(--red);}
+.chap .no .b{font-size:34px;font-weight:900;line-height:1;}
+.chap .no .t{font-family:"Noto Sans SC",sans-serif;font-size:10px;letter-spacing:2px;margin-top:4px;}
+.chap .h2wrap{flex:1;}
+.chap h2{font-size:28px;font-weight:800;color:var(--ink);line-height:1.35;}
+.chap .subline{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;color:var(--muted);margin-top:7px;}
+
+/* 场景叙事段 */
+.scene{font-size:16.5px;color:var(--ink-2);margin:14px 0 22px;}
+.scene p{margin-bottom:14px;}
+.scene .first::first-letter{font-size:42px;font-weight:900;float:left;line-height:1;padding:3px 8px 0 0;color:var(--red);}
+.scene .hl{color:var(--red);font-weight:600;}
+.scene .qc{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);}
+
+/* 手写招工红纸引用 */
+.redpaper{position:relative;background:var(--red);color:#F1EFE8;padding:22px 26px;margin:20px 0;
+  font-family:"Ma Shan Zheng",serif;}
+.redpaper::before,.redpaper::after{content:"";position:absolute;inset:6px;border:1px dashed rgba(246,235,221,.4);}
+.redpaper .q{font-size:24px;line-height:1.7;}
+.redpaper .a{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:1px;color:rgba(246,235,221,.7);margin-top:12px;}
+
+/* ============ 卡片/网格 ============ */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.card{background:transparent;border:none;padding:24px 6px 16px;position:relative;}
+.card.wide{grid-column:1/-1;}
+.card h3{font-size:18px;font-weight:700;color:var(--ink);line-height:1.6;
+  padding-left:13px;border-left:3px solid var(--red);margin-bottom:14px;}
+.chart{width:100%;height:320px;}
+.chart.tall{height:400px;}
+/* 图注/来源/交互条 */
+.chart-foot{margin-top:10px;padding-top:11px;border-top:1px dashed var(--rule);
+  display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;}
+.source{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:1.5;flex:1;min-width:200px;}
+.source b{color:var(--ink-2);font-weight:600;}
+.actions{display:flex;flex-wrap:wrap;gap:7px;}
+.guide{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;cursor:pointer;border:1px solid var(--ink-2);
+  color:var(--ink-2);background:transparent;padding:6px 12px;border-radius:2px;transition:.15s;}
+.guide:hover{background:var(--ink);color:var(--paper);}
+.guide.on{background:var(--red);border-color:var(--red);color:#F1EFE8;}
+.guide.edit{border-color:var(--red);color:var(--red);}
+.guide.edit:hover{background:var(--red);color:#F1EFE8;}
+
+/* ============ 照片横幅 ============ */
+.photo{position:relative;margin:6px 0 26px;}
+.photo img{width:100%;display:block;filter:saturate(.82) contrast(.98);}
+.photo .figcap{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);
+  padding:7px 2px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:10px;}
+.photo .replace{cursor:pointer;opacity:.7;}
+.photo .replace:hover{opacity:1;color:var(--red);}
+.photo.inline{max-width:430px;}
+.photogrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px 0 26px;}
+.photogrid .photo{margin:0;}
+
+/* ============ 双面卡 ============ */
+.flip{perspective:1600px;cursor:pointer;}
+.flip .inner{position:relative;width:100%;height:100%;transition:transform .85s;transform-style:preserve-3d;}
+.flip.on .inner{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;padding:26px;display:flex;flex-direction:column;justify-content:center;}
+.face.front{background:var(--red);color:#F1EFE8;}
+.face.back{background:var(--paper-3);transform:rotateY(180deg);color:var(--ink-2);border:1px solid var(--rule);}
+.face .tag{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:2px;margin-bottom:14px;}
+.face.front .tag{color:rgba(246,235,221,.75);}
+.face.back .tag{color:var(--red);}
+.face .jt{font-size:18px;line-height:1.9;}
+.face .hint{position:absolute;bottom:13px;right:20px;font-family:"Noto Sans SC",sans-serif;font-size:11px;}
+.flipbtn{cursor:pointer;border:1px solid currentColor;padding:4px 11px;border-radius:2px;white-space:nowrap;}
+.face.front .flipbtn:hover{color:var(--red);background:var(--paper);}
+.face.back .flipbtn:hover{color:var(--paper);background:var(--ink);}
+.flip-open{height:330px;}
+.flip-hero{height:310px;margin:10px 0 30px;}
+
+/* ============ 词云 ============ */
+.cloudlbl{font-family:"Noto Sans SC",sans-serif;font-size:13px;font-weight:600;color:var(--ink-2);margin:6px 0 8px;}
+.cloud{display:flex;flex-wrap:wrap;gap:9px 12px;align-items:center;justify-content:center;padding:10px 6px;}
+.cloud.ad span{font-family:"Ma Shan Zheng",serif;color:var(--red-deep);}
+.cloud.st span{font-family:"Noto Sans SC",sans-serif;color:var(--ink-2);}
+
+/* ============ 时间线 ============ */
+.timeline{position:relative;padding:6px 0 4px;}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:1px;background:var(--ink);}
+.tl{position:relative;padding:0 0 20px 34px;}
+.tl .dot{position:absolute;left:2px;top:5px;width:15px;height:15px;background:var(--paper);border:2px solid var(--red);}
+.tl h4{font-size:16px;font-weight:700;color:var(--ink);}
+.tl p{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:1.6;}
+
+/* ============ 计算器 ============ */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:28px;
+  background:var(--paper-2);border:1px solid var(--rule);margin:8px 0 30px;}
+.calc .in label{display:block;font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--ink-2);margin:11px 0 5px;}
+.calc .in input{width:100%;padding:10px 12px;border:1px solid var(--rule);border-radius:2px;
+  background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",sans-serif;font-size:15px;}
+.calc .in input:focus{border-color:var(--red);outline:none;}
+.calc .out{display:flex;flex-direction:column;justify-content:center;gap:12px;}
+.res{border:1px solid var(--rule);border-left:3px solid var(--red);padding:14px 18px;background:var(--paper);}
+.res .v{font-size:28px;font-weight:900;color:var(--ink);}
+.res .l{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);}
+
+/* 避坑清单 */
+.tips{counter-reset:tip;list-style:none;margin:10px 0 30px;}
+.tips li{position:relative;padding:12px 12px 12px 52px;border-bottom:1px solid var(--rule);
+  font-size:15.5px;color:var(--ink-2);}
+.tips li::before{counter-increment:tip;content:counter(tip,decimal-leading-zero);position:absolute;left:12px;top:12px;
+  font-family:Ma Shan Zheng;font-size:22px;color:var(--red);}
+.tips li b{color:var(--ink);}
+
+/* ============ 方法 ============ */
+.method{background:var(--paper-2);border:1px solid var(--rule);padding:28px 30px;margin:20px 0 40px;}
+.method h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--ink);}
+.method p{font-size:14px;color:var(--ink-2);margin-bottom:12px;font-family:"Noto Sans SC",sans-serif;line-height:1.8;}
+.method p b{color:var(--red);font-weight:700;}
+
+/* ============ 隐藏平台注入标识 ============ */
+[data-custom-element*="watermark"],.watermark-root{display:none!important;visibility:hidden!important;pointer-events:none!important;}
+footer{text-align:center;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);
+  padding:22px 0 80px;border-top:1px solid var(--rule);}
+
+/* 印章 */
+.stamp{position:absolute;right:-10px;top:-14px;width:78px;height:78px;border:2px solid var(--red);border-radius:50%;
+  color:var(--red);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transform:rotate(-12deg);font-family:"Ma Shan Zheng";opacity:.82;z-index:3;pointer-events:none;}
+.stamp .s1{font-size:20px;line-height:1;}
+.stamp .s2{font-size:10px;letter-spacing:1px;margin-top:2px;}
+
+/* ============ 数据编辑弹窗 ============ */
+.modal-mask{position:fixed;inset:0;z-index:1000;background:rgba(34,30,22,.5);display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-mask.show{display:flex;}
+.modal{background:var(--paper);border:1px solid var(--ink);width:100%;max-width:620px;max-height:86vh;display:flex;flex-direction:column;}
+.modal .mh{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--ink);}
+.modal .mh .t{font-weight:700;font-size:16px;}
+.modal .mh .x{cursor:pointer;font-size:20px;line-height:1;color:var(--muted);}
+.modal .mb{padding:18px 20px;overflow:auto;}
+.modal .mb textarea{width:100%;min-height:260px;border:1px solid var(--rule);border-radius:2px;background:var(--paper);
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;padding:12px;color:var(--ink);line-height:1.6;}
+.modal .mb textarea:focus{border-color:var(--red);outline:none;}
+.modal .mf{padding:13px 20px;border-top:1px solid var(--rule);display:flex;justify-content:flex-end;gap:10px;}
+.modal .err{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--red);margin-top:8px;display:none;}
+.modal .note{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);margin-bottom:10px;}
+
+@media(max-width:820px){
+  .grid2{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:1fr 1fr;}
+  .kpi:nth-child(2){border-right:none;}
+  .kpi{border-bottom:1px solid var(--rule);}
+  .calc,.photogrid{grid-template-columns:1fr;}
+  .hero h1{font-size:38px;}
+  .chart{height:300px;}
+  .card.wide{grid-column:auto;}
+  .hero{padding-bottom:90px;}
+}
+</style>
+<script src="https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/plugins/common-monitors.1.16.9.js" crossorigin="anonymous"></script></head>
+<body>
+
+<!-- ================= 报头 ================= -->
+<header class="hero">
+ <div class="ph"><img src="https://aka.doubaocdn.com/s/Zy2MCtMfMo" alt="电子厂车间" data-img="hero" title="双击可更换图片"></div>
+ <div class="wrap inner">
+  <div class="masthead">
+   <div class="org" contenteditable="true" data-edkey="ed103"><br></div>
+   <div class="date" contenteditable="true" data-edkey="ed104"><br></div>
+  </div>
+  <div class="kicker" contenteditable="true" data-edkey="ed0"><br></div>
+  <h1 contenteditable="true" data-edkey="ed1">“蓝领高薪”的<em>后半句</em></h1>
+  <div class="sub" contenteditable="true" data-edkey="ed2">——招聘宣传与劳动者叙事的落差</div>
+  <div class="lead" contenteditable="true" data-edkey="ed3">同一条招聘广告，有两种读法。广告说“月入过万、包吃住、长白班”；劳动者实际得到的是“到手4500、月工时300、另扣商保管理费”。我采集了552条蓝领高薪的招聘广告、142条劳动者真实叙事，再以官方统计为基准，想从蓝领工人视角看看高薪广告下面的那半句话，究竟写了什么。</div>
+  <div class="kpis">
+   <div class="kpi"><div class="n" contenteditable="true" data-edkey="ed105">552</div><div class="l" contenteditable="true" data-edkey="ed106">面向蓝领工人高薪招聘广告样本</div></div>
+   <div class="kpi"><div class="n" contenteditable="true" data-edkey="ed107">6250元</div><div class="l" contenteditable="true" data-edkey="ed108">广告承诺月薪中位数</div></div>
+   <div class="kpi"><div class="n" contenteditable="true" data-edkey="ed109">35%</div><div class="l" contenteditable="true" data-edkey="ed110">承诺比到手中位高出</div></div>
+   <div class="kpi"><div class="n" contenteditable="true" data-edkey="ed111">142条</div><div class="l" contenteditable="true" data-edkey="ed112">劳动者真实叙事</div></div>
+  </div>
+ </div>
+</header>
+
+<!-- ================= 开篇：双面卡 ================= -->
+<div class="wrap">
+ <div class="flip flip-hero" id="flip0">
+  <div class="inner">
+   <div class="face front">
+    <div class="tag" contenteditable="true" data-edkey="ed120">高薪广告的诱惑 · 正面</div>
+    <div class="jt" contenteditable="true" data-edkey="ed4">“综合月薪8000—12000元，包吃包住、长白班，月休4天，五险一金，晋升空间大，新人入职另有返费。”</div>
+    <div class="hint"><span class="flipbtn" data-flip="flip0">翻面看后半句</span></div>
+   </div>
+   <div class="face back">
+    <div class="tag" contenteditable="true" data-edkey="ed121">劳动者被背刺 · 背面</div>
+    <div class="jt" contenteditable="true" data-edkey="ed5">“到手4500，月工时300小时，另扣商保费、管理费；承诺的差价要干满工期才发，提前走就没了。”</div>
+    <div class="hint"><span class="flipbtn" data-flip="flip0">翻回正面</span></div>
+   </div>
+  </div>
+ </div>
+
+ <div class="scene">
+  <p class="first" contenteditable="true" data-edkey="ed6">凌晨四点四十，老陈的手机震动，招聘软件弹出一条高薪工作的招聘广告。屏幕上一行红字顶到最大——“综合月薪8000—12000元，包吃包住，长白班坐班，干满返费”。秋收刚完，地里的活茬子还没结束，人却已经被招工广告催着上路。他今年四十三，河南周口人，家里两个学生，一个高中、一个初中。他把“8000”和“12000”分开算了算：按少的算，干一个月顶家里三亩地一季的收入；按多的算，再干两年，小儿子上大学的钱就凑齐了。</p>
+  <p contenteditable="true" data-edkey="ed7">三天后，他坐了十四个小时的火车到福州。一个月零五天之后，同样在凌晨，他站在厂区门外，把手机里的工资条照片发给本来想跟他一起来厂里打工的老婆，并补了一句语音：“网上这高薪招工广告尽是骗人的！”</p>
+  <p class="qc" contenteditable="true" data-edkey="ed8">&nbsp;</p>
+ </div>
+</div>
+
+<!-- ================= 第一部分 ================= -->
+<section class="wrap">
+ <div class="chap">
+  <div class="no"><div class="b">壹</div><div class="t">PART 1</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed9">广告里的“高薪”，到底多有诱惑力</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed10">&nbsp;</div>
+  </div>
+ </div>
+
+ <div class="scene">
+  <p contenteditable="true" data-edkey="ed11">要找“高薪”，得先看看它长在什么地方。根据搜集样本里的招聘广告，集中在两类城市：一类是重庆（218条），一类是福州、厦门、宁德、龙岩、漳州等福建城市（334条）。岗位则集中在电子厂普工、新能源电池厂、汽配厂，再加上遍布全国的快递与仓库分拣。&nbsp;</p>
+ </div>
+
+ <div class="grid2">
+  <div class="card">
+   
+   <h3 contenteditable="true" data-edkey="ed12">招聘广告承诺月薪中位 6250 元，比劳动者到手中位高出约 35%</h3>
+   <div class="chart" id="c1" _echarts_instance_="ec_1791116157336" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed124"><b>数据来源：</b>552条广告承诺薪资；国家统计局2025年农民工监测报告（月均5075元）；142条劳动者叙事到手中位。</span>
+    <span class="actions">
+     <button class="guide" data-g="c1">依次高亮</button>
+    </span>
+   </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed13">近20%的岗位把薪资上限标到万元，但仅约3%的起薪（下限）真的过万</h3>
+   <div class="chart" id="c2" _echarts_instance_="ec_1791116157337" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(253px, 242px, 0px); border-color: rgb(38, 36, 30); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#F1EFE8;font-weight:400;line-height:1;">≥10000</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#A6543F;"></span><span style="font-size:14px;color:#F1EFE8;font-weight:400;margin-left:2px">薪资上限</span><span style="float:right;margin-left:20px;font-size:14px;color:#F1EFE8;font-weight:900">19.6</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed125"><b>数据来源：</b>552条广告，按薪资下限与上限分别统计各档位占比（%）。</span>
+    <span class="actions">
+     <button class="guide on" data-g="c2">只看：起薪(下限)</button>
+    </span>
+   </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed14">广告承诺时薪中位约22元，多数行业真实基准时薪仅 14—18 元</h3>
+   <div class="chart" id="c8" _echarts_instance_="ec_1791116157338" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed126"><b>数据来源：</b>广告承诺时薪按月薪÷26天÷11小时推算；行业基准来自国家统计局城镇单位平均工资。</span>
+    <span class="actions">
+     <button class="guide" data-g="c8">基准线显隐</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed15">承诺中位最高的是龙岩（7000元），高薪岗位高度集中于少数城市</h3>
+   <div class="chart" id="c4" _echarts_instance_="ec_1791116157339" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed127"><b>数据来源：</b>样本量≥5的城市，按承诺月薪中位数排序（元），括号为样本数。</span>
+    <span class="actions">
+     <button class="guide" data-g="c4">显示样本量</button>
+    </span>
+  </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= 第二部分 ================= -->
+<section class="wrap">
+ <div class="photo">
+  <img src="https://aka.doubaocdn.com/s/hR94NrveEB" alt="劳务中介门店前求职者看招工信息" data-img="adboard" title="双击可更换图片">
+  <div class="figcap">
+   <span contenteditable="true" data-edkey="ed113">中介门店门口的招工信息板，红底金字写着“工资、日日有钱花”</span>
+  </div>
+ </div>
+
+ <div class="chap">
+  <div class="no"><div class="b">贰</div><div class="t">PART 2</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed16">“包吃住、能倒班”：看招聘方怎么承诺画饼？</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed17"><br></div>
+  </div>
+ </div>
+
+ <div class="scene">
+  <p contenteditable="true" data-edkey="ed18">老陈到福州的那天傍晚，先去了工厂附近一条中介街。不到五百米，挤着十几家门面，每家门口都立着小黑板，红的黄的粉笔字写满厂名、工价和“综合工资”。他一家一家看过去，数字一家比一家高。他问：“真能拿一万二？”柜台后的人头也没抬：“旺季能。”他又问：“那现在算不算旺季？”对方把一张表推过来：“先填身份证，填了带你看厂。”</p>
+ </div>
+
+ <div class="grid2">
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed19">“免费工作餐”是最高频的非现金承诺，241条岗位将其写进广告</h3>
+   <div class="chart" id="c3" _echarts_instance_="ec_1791116157340" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(159px, 84px, 0px); border-color: rgb(38, 36, 30); pointer-events: none; visibility: hidden; opacity: 0;">undefined：undefined条</div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed128"><b>数据来源：</b>552条广告中各类福利标签出现次数（条）。</span>
+    <span class="actions">
+     <button class="guide" data-g="c3">按频次排序</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed20">广告满口“高薪、包吃住、晋升”，劳动者只说“被扣、白干、跑路”</h3>
+   <div class="cloudlbl" contenteditable="true" data-edkey="ed21">招聘广告话术词云图</div>
+   <div class="cloud ad" id="cloudAd">
+    <span contenteditable="true" data-edkey="ed22" style="font-size:40px;">高薪</span>
+    <span contenteditable="true" data-edkey="ed23" style="font-size:36px;">包吃住</span>
+    <span contenteditable="true" data-edkey="ed24" style="font-size:32px;">综合月薪</span>
+    <span contenteditable="true" data-edkey="ed25" style="font-size:29px;">月入过万</span>
+    <span contenteditable="true" data-edkey="ed26" style="font-size:26px;">晋升</span>
+    <span contenteditable="true" data-edkey="ed27" style="font-size:24px;">长白班</span>
+    <span contenteditable="true" data-edkey="ed28" style="font-size:23px;">五险一金</span>
+    <span contenteditable="true" data-edkey="ed29" style="font-size:21px;">返费</span>
+    <span contenteditable="true" data-edkey="ed30" style="font-size:19px;">加班补助</span>
+    <span contenteditable="true" data-edkey="ed31" style="font-size:17px;">坐班</span>
+    <span contenteditable="true" data-edkey="ed32" style="font-size:16px;">免费工作餐</span>
+   </div>
+   <div class="cloudlbl" style="margin-top:12px;" contenteditable="true" data-edkey="ed33">劳动者反馈词云图</div>
+   <div class="cloud st" id="cloudSt">
+    <span contenteditable="true" data-edkey="ed34" style="font-size:36px;">克扣</span>
+    <span contenteditable="true" data-edkey="ed35" style="font-size:32px;">白干</span>
+    <span contenteditable="true" data-edkey="ed36" style="font-size:30px;">跑路</span>
+    <span contenteditable="true" data-edkey="ed37" style="font-size:27px;">拖欠</span>
+    <span contenteditable="true" data-edkey="ed38" style="font-size:25px;">降工价</span>
+    <span contenteditable="true" data-edkey="ed39" style="font-size:23px;">虚标</span>
+    <span contenteditable="true" data-edkey="ed40" style="font-size:21px;">没结算</span>
+    <span contenteditable="true" data-edkey="ed41" style="font-size:19px;">压工资</span>
+    <span contenteditable="true" data-edkey="ed42" style="font-size:17px;">扣商保</span>
+    <span contenteditable="true" data-edkey="ed43" style="font-size:16px;">扣管理费</span>
+    <span contenteditable="true" data-edkey="ed44" style="font-size:15px;">交押金</span>
+   </div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed129"><b>数据来源：</b>552条广告文本、142条叙事文本词频统计（字号代表频次）。</span>
+   </div>
+  </div>
+
+  <div class="card wide">
+   <h3 contenteditable="true" data-edkey="ed45">同工同酬底薪+加班仍是主流，纯工价 / 补差价 / 返费等灵活用工占比近四成</h3>
+   <div class="chart tall" id="c13" _echarts_instance_="ec_1791116157341" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 1020px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1020" height="400" style="position: absolute; left: 0px; top: 0px; width: 1020px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(582px, 255px, 0px); border-color: rgb(84, 112, 198); pointer-events: none; visibility: hidden; opacity: 0;">：100%</div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed130"><b>数据来源：</b>552条岗位薪资结构模式和占比。</span>
+    <span class="actions">
+     <button class="guide" data-g="c13">点击图块看占比</button>
+    </span>
+   </div>
+  </div>
+ </div>
+
+ <div class="redpaper">
+  <div class="q" contenteditable="true" data-edkey="ed46">老陈签的是补差价。招工的人说“20+10，一个月到手八九千”，他当时没听懂“+10”是要等、要在职、还可能拿不到。等他弄明白，人已经在车间里了。</div>
+  <div class="a" contenteditable="true" data-edkey="ed47">补差价关键条件：发差价那天“必须在职”，提前走差价即失；返费多为口头承诺。</div>
+ </div>
+</section>
+
+<!-- ================= 第三部分 ================= -->
+<section class="wrap">
+ <div class="photo">
+  <img src="https://aka.doubaocdn.com/s/hgsTTUmSOd" alt="电子厂女工在工位" data-img="female" title="双击可更换图片">
+  <div class="figcap">
+   <span contenteditable="true" data-edkey="ed114">电子厂工位上的女工，电批、绿色工作台与堆叠的零件</span>
+  </div>
+ </div>
+
+ <div class="chap">
+  <div class="no"><div class="b">叁</div><div class="t">PART 3</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed48">承诺 vs 现实：工资是怎么“缩水”的</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed49"><br></div>
+  </div>
+ </div>
+
+ <div class="grid2">
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed50">同一条岗位，广告写“9000”，工友到手“5000”</h3>
+   <div class="flip flip-open on" id="flip1">
+    <div class="inner">
+     <div class="face front">
+      <div class="tag" contenteditable="true" data-edkey="ed122">广告 · 正面</div>
+      <div class="jt" contenteditable="true" data-edkey="ed51">“综合月薪7000—9000元，包吃住、长白班，加班另算，入职有返费。”</div>
+      <div class="hint"><span class="flipbtn" data-flip="flip1">翻面看叙事</span></div>
+     </div>
+     <div class="face back">
+      <div class="tag" contenteditable="true" data-edkey="ed123">工人 · 背面</div>
+      <div class="jt" contenteditable="true" data-edkey="ed52">“中介说工价24，进厂后单方面降到18.5，还欠57个小时工资没结算。”</div>
+      <div class="hint"><span class="flipbtn" data-flip="flip1">翻回正面</span></div>
+     </div>
+    </div>
+   </div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed131"><b>数据来源：</b>同城市同岗位的典型广告与劳动者叙事。</span>
+   </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed53">承诺工资被逐项扣减：组班、差价、返费、商保、管理费、水电食宿</h3>
+   <div class="chart" id="waterfall" _echarts_instance_="ec_1791116157349" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(307px, 63px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#F1EFE8;font-weight:400;line-height:1;">实际到手</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:transparent;"></span><span style="float:right;margin-left:10px;font-size:14px;color:#F1EFE8;font-weight:900">0</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#A6543F;"></span><span style="font-size:14px;color:#F1EFE8;font-weight:400;margin-left:2px">承诺</span><span style="float:right;margin-left:20px;font-size:14px;color:#F1EFE8;font-weight:900">-</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#ECE0D6;"></span><span style="font-size:14px;color:#F1EFE8;font-weight:400;margin-left:2px">扣减</span><span style="float:right;margin-left:20px;font-size:14px;color:#F1EFE8;font-weight:900">-</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#26241E;"></span><span style="font-size:14px;color:#F1EFE8;font-weight:400;margin-left:2px">到手</span><span style="float:right;margin-left:20px;font-size:14px;color:#F1EFE8;font-weight:900">6,220</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed132"><b>数据来源：</b>以承诺上限8000元为例，按工资条典型扣费（商保86、管理费100、食宿约400）推演，非具体企业。</span>
+    <span class="actions">
+     <button class="guide" data-g="waterfall">逐项播放</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed54">两班倒岗位薪资中位6500元，比长白班高出约8%</h3>
+   <div class="chart" id="c9" _echarts_instance_="ec_1791116157342" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed133"><b>数据来源：</b>长白班（n=80）、两班倒（n=181）岗位承诺月薪中位数。</span>
+    <span class="actions">
+     <button class="guide" data-g="c9">高亮差额</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed55">“其他”薪资区间最宽，从2800到15000元，岗位内部差异巨大</h3>
+   <div class="chart" id="c5" _echarts_instance_="ec_1791116157343" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed134"><b>数据来源：</b>全职月薪样本（2000—15000元），箱体为各岗位类别五数（下限、四分之一中位数、中位数、四分之三中位数、上限）概括。</span>
+    <span class="actions">
+     <button class="guide" data-g="c5">点某类看五数</button>
+    </span>
+  </div>
+  </div>
+ </div>
+
+ <div class="photogrid">
+  <div class="photo">
+   <img src="https://aka.doubaocdn.com/s/YCfA6TAJgo" alt="员工工资表" data-img="wagesheet" title="双击可更换图片">
+   <div class="figcap"><span contenteditable="true" data-edkey="ed115">员工工资表：工时多在278—315小时，工价28元，实发6485—8637元</span></div>
+  </div>
+  <div class="photo">
+   <img src="https://aka.doubaocdn.com/s/XDB2uW3XZb" alt="工资条扣费明细" data-img="payslip" title="双击可更换图片">
+   <div class="figcap"><span contenteditable="true" data-edkey="ed116">工资条：应发7115，扣伙食195、住宿170，实领6750元</span></div>
+  </div>
+ </div>
+
+ <div class="scene">
+  <p contenteditable="true" data-edkey="ed56">老陈第一次发薪是在上午十点，下班之后才收到银行短信。他蹲在宿舍楼下的台阶上，把工资条对着手机逐项看：底薪2490，加班费一千多，岗位津贴几百，然后是商保、管理费、水电、被褥、车费。他问同宿舍的人差价怎么没补，对方说：“你发薪那天请假了，不在职，补不了。”他这才想起，那天因为工作要求一直站着，腰间盘突出复发疼得厉害，去了趟医院。他把扣费一项项加了一遍，又用计算器按了一遍，数字对得上，但他高兴不起来——他原本以为，自己是按每小时三十块钱来的。</p>
+ </div>
+</section>
+
+<!-- ================= 第四部分 ================= -->
+<section class="wrap">
+ <div class="photo">
+  <img src="https://aka.doubaocdn.com/s/gimeVSPTG1" alt="快递分拣中心" data-img="sorting" title="双击可更换图片">
+  <div class="figcap">
+   <span contenteditable="true" data-edkey="ed117">快递分拣中心，传送带两侧，包裹与红色工服的分拣工</span>
+  </div>
+ </div>
+
+ <div class="chap">
+  <div class="no"><div class="b">肆</div><div class="t">PART 4</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed57">城市与岗位落差排行</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed58"><br></div>
+  </div>
+ </div>
+
+ <div class="grid2">
+  <div class="card wide">
+   <h3 contenteditable="true" data-edkey="ed59">住宿餐饮和居民服务广告承诺比真实基准虚高近40%，行业落差最大</h3>
+   <div class="chart tall" id="gapRank" _echarts_instance_="ec_1791116157350" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 1020px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="1020" height="400" style="position: absolute; left: 0px; top: 0px; width: 1020px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed135"><b>数据来源：</b>广告承诺来自552条广告；官方基准来自国家统计局城镇单位分行业平均工资折算。</span>
+    <span class="actions">
+     <button class="guide on" data-g="gapRank">切换：金额 / 落差率</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed60">最常见的落差是工价被克扣或虚标，约三成劳动者遭遇过</h3>
+   <div class="chart" id="c10" _echarts_instance_="ec_1791116157344" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; will-change: transform; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(301px, 230px, 0px); border-color: rgb(38, 36, 30); pointer-events: none;">undefined：undefined次</div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed136"><b>数据来源：</b>142条劳动者叙事中各类落差事件出现次数（次）。</span>
+    <span class="actions">
+     <button class="guide" data-g="c10">按次数排序</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed61">从广告上限7000元到劳动者到手4625元，缩水约34%</h3>
+   <div class="chart" id="c12" _echarts_instance_="ec_1791116157345" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(175px, 277px, 0px); border-color: rgb(94, 89, 76); pointer-events: none; visibility: hidden; opacity: 0;">扣食宿社保: 4500元</div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed137"><b>数据来源：</b>552条广告与142条叙事，从广告上限到实际到手的逐层缩水（元/月）。</span>
+    <span class="actions">
+     <button class="guide" data-g="c12">逐层播放</button>
+    </span>
+  </div>
+  </div>
+ </div>
+
+ <div class="photo">
+  <img src="https://aka.doubaocdn.com/s/i9UgX4VaId" alt="汽车总装车间" data-img="auto" title="双击可更换图片">
+  <div class="figcap">
+   <span contenteditable="true" data-edkey="ed118">汽车总装车间，黄色吊具、车架与蓝色工服的装配工</span>
+  </div>
+ </div>
+</section>
+
+<!-- ================= 第五部分 ================= -->
+<section class="wrap">
+ <div class="chap">
+  <div class="no"><div class="b">伍</div><div class="t">PART 5</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed62">流动原因与劳动者旅程</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed63"><br></div>
+  </div>
+ </div>
+
+ <div class="grid2">
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed64">近58%的流动与工资承诺落空或拖欠直接相关</h3>
+   <div class="chart" id="c11" _echarts_instance_="ec_1791116157346" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgb(38, 36, 30); border-width: 1px; border-radius: 4px; color: rgb(241, 239, 232); font: 14px / 21px &quot;Noto Sans SC&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(290px, 237px, 0px); border-color: rgb(166, 84, 63); pointer-events: none; visibility: hidden; opacity: 0;">自离：3次（10%）</div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed138"><b>数据来源：</b>142条叙事中劳动者流动 / 离职原因构成（块面积代表次数）。</span>
+    <span class="actions">
+     <button class="guide" data-g="c11">切换为占比</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed65">从“刷广告”到“跑路”，工资承诺往往在首次发薪时才被戳破</h3>
+   <div class="timeline">
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed66">刷到广告 / 短视频招工</h4>
+     <p contenteditable="true" data-edkey="ed67">短视频信息流、招聘平台——“月入过万、包吃住”</p></div>
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed68">联系中介 / 劳务</h4>
+     <p contenteditable="true" data-edkey="ed69">话术：“24一小时，补差价、返费”，多为口头承诺</p></div>
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed70">到达厂区 / 体检</h4>
+     <p contenteditable="true" data-edkey="ed71">先垫付路费、体检费，身份证被临时收走</p></div>
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed72">签合同</h4>
+     <p contenteditable="true" data-edkey="ed73">合同薪资低于口头，差价条款多为空白或附加条件</p></div>
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed74">首次发薪（关键节点）</h4>
+     <p contenteditable="true" data-edkey="ed75">工价降、满勤奖没了，商保管理费水电逐项扣</p></div>
+    <div class="tl"><div class="dot"></div><h4 contenteditable="true" data-edkey="ed76">离职 / 跑路</h4>
+     <p contenteditable="true" data-edkey="ed77">提前走则差价返费不结算，自离工资被拖欠</p></div>
+   </div>
+   <div class="chart-foot"><span class="source" contenteditable="true" data-edkey="ed139"><b>数据来源：</b>142条工人叙事归纳的典型求职旅程。</span></div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed78">约46%的岗位年龄上限卡在45岁以下，另有16个岗位只招35岁以下</h3>
+   <div class="chart" id="c6" _echarts_instance_="ec_1791116157347" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed140"><b>数据来源：</b>标注年龄要求的198个岗位，按年龄上限分组计数。</span>
+    <span class="actions">
+     <button class="guide" data-g="c6">显示百分比</button>
+    </span>
+  </div>
+  </div>
+
+  <div class="card">
+   <h3 contenteditable="true" data-edkey="ed79">约75%的蓝领岗位“学历不限”，体力劳动几乎不看文凭</h3>
+   <div class="chart" id="c7" _echarts_instance_="ec_1791116157348" title="双击可编辑该图表数据" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 493px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="493" height="320" style="position: absolute; left: 0px; top: 0px; width: 493px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+   <div class="chart-foot">
+    <span class="source" contenteditable="true" data-edkey="ed141"><b>数据来源：</b>552条广告的学历门槛构成。</span>
+    <span class="actions">
+     <button class="guide" data-g="c7">切换为环形图</button>
+    </span>
+  </div>
+  </div>
+ </div>
+
+ <div class="photo">
+  <img src="https://aka.doubaocdn.com/s/8i0oR0QJbv" alt="深夜火车站拖编织袋的人" data-img="station" title="双击可更换图片">
+  <div class="figcap">
+   <span contenteditable="true" data-edkey="ed119">深夜车站，一个拖着编织袋、等待出发或离开的人</span>
+  </div>
+ </div>
+
+ <div class="redpaper">
+  <div class="q" contenteditable="true" data-edkey="ed80">阿梅图“干满三个月返八千”的返费，干到第八十多天，因一次迟到算违纪，返费资格没了。她写：“那八千块，像挂在前面的草，你一直走，一直够不着。”</div>
+  <div class="a" contenteditable="true" data-edkey="ed81">23岁的分拣工小林，夜班从晚八点到早八点，“传送带不停，你就不能停”，干了两个月腰不行了，回了老家。</div>
+ </div>
+</section>
+
+<!-- ================= 结尾：计算器 ================= -->
+<div class="wrap">
+ <div class="chap">
+  <div class="no"><div class="b">算</div><div class="t">TOOL</div></div>
+  <div class="h2wrap">
+   <h2 contenteditable="true" data-edkey="ed82">时薪计算器：算算你“被承诺”的时薪到底值多少</h2>
+   <div class="subline" contenteditable="true" data-edkey="ed83"><br></div>
+  </div>
+ </div>
+ <div class="calc">
+  <div class="in">
+   <label contenteditable="true" data-edkey="ed84">承诺月薪（元，广告写的综合工资）</label>
+   <input id="m" type="number" value="8000">
+   <label contenteditable="true" data-edkey="ed85">每日工时（小时，含加班）</label>
+   <input id="h" type="number" value="11">
+   <label contenteditable="true" data-edkey="ed86">每月休息天数</label>
+   <input id="r" type="number" value="4">
+   <label contenteditable="true" data-edkey="ed87">每月扣费合计（商保+管理费+食宿+水电等，元）</label>
+   <input id="d" type="number" value="680">
+  </div>
+  <div class="out">
+   <div class="res"><div class="v" id="nom">28.0元</div><div class="l" contenteditable="true" data-edkey="ed88">名义时薪（按广告承诺算，元/小时）</div></div>
+   <div class="res"><div class="v" id="real">25.6元</div><div class="l" contenteditable="true" data-edkey="ed89">实际时薪（扣完费、按真实工时，元/小时）</div></div>
+   <div class="res"><div class="v" id="take">7320元</div><div class="l" contenteditable="true" data-edkey="ed90">实际到手月薪（元）</div></div>
+  </div>
+ </div>
+
+ <div class="chap" style="border:none;margin-bottom:14px;">
+  <div class="h2wrap"><h2 style="font-size:24px;" contenteditable="true" data-edkey="ed91">数据方法、口径与伦理说明</h2></div>
+ </div>
+ <ul class="tips">
+  <li contenteditable="true" data-edkey="ed92"><span style="color: rgb(166, 84, 63); font-weight: 700; font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">数据来源：</span><span style="font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">招聘广告样本552条，采集自汇博招聘（以重庆为主，218条）与597直聘（以福州等福建城市为主，334条）；劳动者叙事142条，来自抖音、投诉直通车、新闻跟帖等公开平台的去标识化内容；官方基准来自国家统计局2025年农民工监测报告及城镇单位分行业平均工资。</span></li>
+  <li contenteditable="true" data-edkey="ed93"><span style="color: rgb(166, 84, 63); font-weight: 700; font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">口径说明：</span><span style="font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">广告承诺月薪取“薪资下限—上限”区间；到手中位以叙事中可核实的到手月薪 / 日薪折算；承诺时薪按“月薪÷26天÷11小时”推算。承诺落差=（广告上限−实际到手）÷广告上限。</span></li>
+  <li contenteditable="true" data-edkey="ed94"><span style="color: rgb(166, 84, 63); font-weight: 700; font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">方法局限：</span><span style="font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">公开讲述者多为体验较差的劳动者，存在自选择偏差，无法与具体广告一一配对，故采用“同城市同岗位的统计分布对比”，不做个体配对的因果结论；结论只描述公开样本，不代表全体蓝领。</span></li>
+  <li contenteditable="true" data-edkey="ed95"><span style="color: rgb(166, 84, 63); font-weight: 700; font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">伦理边界：</span><span style="font-family: &quot;Noto Sans SC&quot;, sans-serif; font-size: 14px;">全部按城市、岗位类别聚合，不按企业名称做“黑名单”；劳动者叙事已去标识化；薪资结构瀑布为理论推演，用于说明扣减逻辑，不代表任一具体企业。</span></li>
+ </ul>
+</div>
+
+
+
+<!-- 数据编辑弹窗 -->
+<div class="modal-mask" id="modalMask">
+ <div class="modal">
+  <div class="mh">
+   <span class="t" id="modalTitle">编辑图表数据 · c10</span>
+   <span class="x" onclick="closeModal()">✕</span>
+  </div>
+  <div class="mb">
+   <div class="note">可直接修改下面的数值（保持数字与引号格式），点击“应用并重绘”生效。此修改会随页面自动保存。</div>
+   <textarea id="modalText"></textarea>
+   <div class="err" id="modalErr" style="display: none;"></div>
+  </div>
+  <div class="mf">
+   <button class="guide" onclick="closeModal()">取消</button>
+   <button class="guide on" onclick="applyChartData()">应用并重绘</button>
+  </div>
+ </div>
+</div>
+
+<!-- 换图弹窗（隐藏的文件选择） -->
+<input type="file" id="filePick" accept="image/*" style="display:none">
+
+<script>
+/* 静默记录运行时错误，便于排查；不在页面上弹出 */
+window.addEventListener("error",function(e){
+ if(/ResizeObserver loop/i.test(e.message||""))return;
+ try{console.error("[page error]",e.message,(e.filename||"")+":"+e.lineno+":"+e.colno);}catch(_){}
+});
+/* ===== 配色（承诺=砖红 / 实际=墨黑 / 官方基准=钢蓝灰） ===== */
+var RED="#A6543F",RED_DEEP="#84402E",RED_PALE="#ECE0D6",
+    INK="#26241E",INK_2="#474339",INK_3="#5E594C",INK_LT="#8A8470",
+    SLATE="#6B7D83",RULE="#D6D1C1";
+
+/* ===== 图表数据 ===== */
+var D={"chart1": {"title": "招聘广告承诺的月薪中位数为 6250 元，比劳动者到手中位数高出 35%", "cats": ["广告薪资\n上限", "广告薪资\n中位", "官方农民工\n月均", "劳动者\n到手中位"], "vals": [7000.0, 6250.0, 5075, 4625.0]}, "chart2": {"title": "20% 的岗位把薪资上限标到万元，但仅 3% 的起薪（下限）真的过万", "bands": ["<4000", "4000-5999", "6000-7999", "8000-9999", "≥10000"], "lo": [12.5, 45.8, 32.2, 7.0, 2.6], "hi": [3.7, 12.5, 37.9, 26.4, 19.6]}, "chart3": {"title": "“免费工作餐”是最高频的非现金承诺，241 条岗位将其写进广告", "labels": ["免费工作餐", "两班倒", "五险一金", "免费住宿", "长白班", "包吃住", "无体力/坐班", "日结"], "vals": [241, 181, 180, 144, 138, 115, 42, 34]}, "chart4": {"title": "薪资中位数最高的是 龙岩（7000 元），高薪岗位高度集中于少数城市", "cities": ["龙岩市", "宁德市", "厦门市", "福州市", "莆田市", "重庆", "漳州市", "襄阳市"], "vals": [7000.0, 6900.0, 6750.0, 6500.0, 6500.0, 6000.0, 5725.0, 5500.0], "cnt": [5, 7, 12, 238, 7, 218, 24, 21]}, "chart5": {"title": "“其他”薪资区间最宽，从 2800 到 15000 元，岗位内部差异巨大", "labels": ["机械/汽配/五金", "纺织/服装", "快递/物流/仓储", "其他", "新能源", "技能工种", "电子厂/电子制造", "餐饮/食品/生活服务", "其他服务业"], "box": [[3250.0, 5750.0, 7000.0, 8500.0, 13500.0], [5500.0, 6500.0, 7000.0, 7500.0, 8250.0], [3000.0, 5500.0, 6500.0, 7500.0, 13000.0], [2800.0, 5500.0, 6250.0, 7500.0, 15000.0], [4750.0, 5750.0, 6250.0, 7000.0, 10000.0], [3500.0, 4750.0, 6000.0, 7750.0, 10000.0], [4250.0, 5750.0, 6000.0, 6500.0, 10000.0], [2500.0, 4500.0, 5500.0, 6750.0, 11500.0], [2050.0, 2150.0, 3100.0, 4500.0, 5750.0]]}, "chart6": {"title": "54% 的岗位年龄上限卡在 45 岁以下，16 个岗位只招 35 岁以下", "bands": ["≤35岁", "36-45岁", "46-50岁", "50岁以上"], "vals": [16, 91, 61, 30], "total": 198}, "chart7": {"title": "75% 的蓝领岗位“学历不限”，体力劳动几乎不看文凭", "data": [{"name": "学历不限", "value": 413}, {"name": "高中/中专", "value": 71}, {"name": "大专及以上", "value": 33}, {"name": "初中及以下", "value": 35}]}, "chart8": {"title": "广告承诺时薪中位 22 元，而多数行业真实基准时薪仅 14-18 元", "ad_hourly": 21.9, "ind_names": ["居民服务", "住宿餐饮", "批发零售", "制造业", "交通邮政", "建筑业"], "ind_vals": [14.4, 14.7, 15.3, 17.9, 20.3, 20.6]}, "chart9": {"title": "两班倒岗位薪资中位 6500 元，比长白班高出 8%", "groups": ["长白班", "两班倒"], "vals": [6000.0, 6500.0], "cnt": [80, 181]}, "chart10": {"title": "33% 的劳动者遭遇过工价被克扣或虚标，是最常见的落差类型", "labels": ["克扣/虚标工价", "自离/离职未结清", "食宿/社保扣费", "劳动强度过大", "承诺虚假", "身体原因"], "vals": [47, 24, 23, 18, 18, 12]}, "chart11": {"title": "近 58% 的流动与工资承诺落空或拖欠直接相关", "data": [{"name": "工资承诺落空", "value": 55}, {"name": "克扣/拖欠工资", "value": 27}, {"name": "身体无法承受", "value": 18}, {"name": "夜班/强度", "value": 14}, {"name": "自离", "value": 14}, {"name": "其他", "value": 14}]}, "chart12": {"title": "从广告上限 7000 元到劳动者到手 4625 元，缩水约 34%", "data": [{"name": "广告承诺上限", "value": 7000}, {"name": "承诺中位", "value": 6250}, {"name": "满勤理论(下限为主)", "value": 5250}, {"name": "扣除食宿社保后", "value": 4500}, {"name": "实际到手", "value": 4625}]}, "chart13": {"title": "同工同酬底薪+加班仍是主流，纯工价/补差价/返费等灵活用工占比近四成", "data": [{"name": "固定用工", "value": 62, "children": [{"name": "底薪+加班费", "value": 48}, {"name": "月薪固定", "value": 14}]}, {"name": "灵活用工", "value": 38, "children": [{"name": "纯工价小时工", "value": 18}, {"name": "补差价", "value": 11}, {"name": "返费", "value": 9}]}]}};
+
+/* ===== 自定义图表数据（瀑布、落差排行） ===== */
+var CUSTOM={
+ waterfall:{
+  lbl:["承诺上限","加班浮动","满勤奖","商保","管理费","食宿","水电","实际到手"],
+  chg:[8000,-800,-300,-80,-100,-400,-100,null]
+ },
+ gapRank:{
+  names:["住宿餐饮","居民服务","批发零售","制造业","建筑业","交通邮政"],
+  prom:[7000,6800,6300,7000,7500,7000],
+  base:[4208,4130,4382,5126,5880,5795],
+  mode:0
+ }
+};
+
+/* ===== 交互状态 ===== */
+var UI={
+ c1:{i:-1},c2:{mode:0},c8:{line:true},c4:{cnt:false},
+ c6:{pct:false},c7:{bar:false}
+};
+var STEP={};
+
+/* ===== 通用样式 ===== */
+function axis(extra){
+ return Object.assign({
+  type:"value",
+  nameTextStyle:{color:INK_2,fontFamily:"Noto Sans SC"},
+  axisLabel:{color:INK_2,fontFamily:"Noto Sans SC"},
+  axisLine:{lineStyle:{color:INK_LT}},
+  splitLine:{lineStyle:{color:RULE,type:"dashed"}}
+ },extra||{});
+}
+function darkTip(extra){
+ return Object.assign({
+  trigger:"axis",triggerOn:"click",confine:true,
+  backgroundColor:INK,borderColor:INK,
+  textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"}
+ },extra||{});
+}
+function getChart(id){
+ var el=document.getElementById(id);
+ if(!el)return null;
+ var c=echarts.getInstanceByDom(el);
+ if(!c)c=echarts.init(el);
+ return c;
+}
+
+/* ===== 渲染函数 ===== */
+var RENDER={
+ c1:function(){
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name.replace(/\n/g,"")+"："+p.value+"元";}}),
+   grid:{left:50,right:20,top:30,bottom:40,containLabel:true},
+   xAxis:{type:"category",data:D.chart1.cats,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",interval:0},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"元/月"}),
+   series:[{type:"bar",barWidth:"48%",
+     data:D.chart1.vals.map(function(v,i){
+       return {value:v,itemStyle:{color:[RED,RED,SLATE,INK][i],borderRadius:[3,3,0,0]}};}),
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:11}}]
+  };
+ },
+ c2:function(){
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip(),
+   legend:{data:["薪资下限(起薪)","薪资上限"],top:0,
+     textStyle:{color:INK_2,fontFamily:"Noto Sans SC"}},
+   grid:{left:45,right:20,top:40,bottom:40,containLabel:true},
+   xAxis:{type:"category",data:D.chart2.bands,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:10},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"占比%"}),
+   series:[
+    {name:"薪资下限(起薪)",type:"bar",data:D.chart2.lo,itemStyle:{color:INK,borderRadius:[3,3,0,0]}},
+    {name:"薪资上限",type:"bar",data:D.chart2.hi,itemStyle:{color:RED,borderRadius:[3,3,0,0]}}
+   ]
+  };
+ },
+ c8:function(){
+  var line=UI.c8.line?{symbol:"none",silent:true,
+    data:[{yAxis:D.chart8.ad_hourly}],lineStyle:{color:RED,type:"dashed",width:2},
+    label:{formatter:"广告承诺 "+D.chart8.ad_hourly+"元",color:RED,fontFamily:"Noto Sans SC",position:"insideEndTop"}}:undefined;
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"元/小时";}}),
+   grid:{left:45,right:20,top:30,bottom:55,containLabel:true},
+   xAxis:{type:"category",data:D.chart8.ind_names,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",rotate:28,fontSize:10},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"元/小时"}),
+   series:[{type:"bar",
+     data:D.chart8.ind_vals.map(function(v){return {value:v,itemStyle:{color:SLATE,borderRadius:[3,3,0,0]}};}),
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10},
+     markLine:line}]
+  };
+ },
+ c4:function(){
+  var rev=D.chart4.cities.slice().reverse();
+  var vals=D.chart4.vals.slice().reverse();
+  var cnt=D.chart4.cnt.slice().reverse();
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"元（样本"+cnt[p.dataIndex]+"）";}}),
+   grid:{left:72,right:62,top:20,bottom:30,containLabel:true},
+   xAxis:axis(),
+   yAxis:{type:"category",data:rev,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:11},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   series:[{type:"bar",data:vals,itemStyle:{color:RED,borderRadius:[0,3,3,0]},
+     label:{show:true,position:"right",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10,
+       formatter:function(p){return UI.c4.cnt?cnt[p.dataIndex]+"条":p.value;}}}]
+  };
+ },
+ c3:function(){
+  var rev=D.chart3.labels.slice().reverse();
+  var vals=D.chart3.vals.slice().reverse();
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"条";}}),
+   grid:{left:82,right:48,top:15,bottom:25,containLabel:true},
+   xAxis:axis(),
+   yAxis:{type:"category",data:rev,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:11},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   series:[{type:"bar",data:vals,itemStyle:{color:RED,borderRadius:[0,3,3,0]},
+     label:{show:true,position:"right",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}}]
+  };
+ },
+ c13:function(){
+  var raw=D.chart13.data;
+  var sun=[
+   {name:"固定用工",value:raw[0].value,itemStyle:{color:INK},
+    children:[
+     {name:"底薪+加班费",value:raw[0].children[0].value,itemStyle:{color:INK_2}},
+     {name:"月薪固定",value:raw[0].children[1].value,itemStyle:{color:INK_3}}]},
+   {name:"灵活用工",value:raw[1].value,itemStyle:{color:RED},
+    children:[
+     {name:"纯工价小时工",value:raw[1].children[0].value,itemStyle:{color:RED_DEEP}},
+     {name:"补差价",value:raw[1].children[1].value,itemStyle:{color:"#B76A56"}},
+     {name:"返费",value:raw[1].children[2].value,itemStyle:{color:"#CD9384"}}]}
+  ];
+  return {
+   backgroundColor:"transparent",
+   tooltip:{trigger:"item",triggerOn:"click",confine:true,
+     backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+     formatter:function(p){return p.name+"："+p.value+"%";}},
+   series:[{type:"sunburst",radius:["18%","92%"],data:sun,sort:null,
+     label:{color:"#F1EFE8",fontFamily:"Noto Sans SC",fontSize:12},
+     levels:[{},
+      {itemStyle:{borderWidth:2,borderColor:"#F1EFE8"}},
+      {itemStyle:{borderWidth:1,borderColor:"#D8D3C4"}}]}]
+  };
+ },
+ c9:function(){
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"元";}}),
+   grid:{left:50,right:20,top:25,bottom:40,containLabel:true},
+   xAxis:{type:"category",data:D.chart9.groups,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC"},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"元/月"}),
+   series:[{type:"bar",barWidth:"42%",
+     data:D.chart9.vals.map(function(v,i){
+       return {value:v,itemStyle:{color:[INK,RED][i],borderRadius:[3,3,0,0]}};}),
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:11}}]
+  };
+ },
+ c5:function(){
+  return {
+   backgroundColor:"transparent",
+   tooltip:{trigger:"item",triggerOn:"click",confine:true,
+     backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+     formatter:function(p){
+       var d=p.value||p.data;
+       var min,q1,med,q3,max;
+       if(d && d.length>=6){min=d[1];q1=d[2];med=d[3];q3=d[4];max=d[5];}
+       else if(d){min=d[0];q1=d[1];med=d[2];q3=d[3];max=d[4];}
+       return p.name+"<br/>上限："+max+" 元<br/>Q4(Q3)："+q3+" 元<br/>中位数："+med+" 元<br/>Q1："+q1+" 元<br/>下限："+min+" 元";
+     }},
+   grid:{left:45,right:20,top:25,bottom:85,containLabel:true},
+   xAxis:{type:"category",data:D.chart5.labels,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",rotate:35,fontSize:9,interval:0},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"元/月"}),
+   series:[{type:"boxplot",data:D.chart5.box,
+     itemStyle:{color:RED_PALE,borderColor:RED}}]
+  };
+ },
+ c10:function(){
+  var rev=D.chart10.labels.slice().reverse();
+  var vals=D.chart10.vals.slice().reverse();
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"次";}}),
+   grid:{left:96,right:46,top:15,bottom:25,containLabel:true},
+   xAxis:axis(),
+   yAxis:{type:"category",data:rev,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:10.5},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   series:[{type:"bar",data:vals,itemStyle:{color:RED,borderRadius:[0,3,3,0]},
+     label:{show:true,position:"right",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}}]
+  };
+ },
+ c12:function(){
+  var nm={"广告承诺上限":"广告承诺上限","承诺中位":"承诺中位",
+    "满勤理论(下限为主)":"满勤下限","实际到手":"实际到手",
+    "扣除食宿社保后":"扣食宿社保"};
+  var col={"广告承诺上限":RED,"承诺中位":RED_DEEP,
+    "满勤理论(下限为主)":"#B76A56",
+    "实际到手":INK,"扣除食宿社保后":INK_3};
+  var fdata=D.chart12.data.map(function(d){
+    return {name:nm[d.name],value:d.value,itemStyle:{color:col[d.name]}};});
+  fdata.sort(function(a,b){return b.value-a.value;});
+  return {
+   backgroundColor:"transparent",
+   tooltip:{trigger:"item",triggerOn:"click",confine:true,
+     backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+     formatter:"{b}: {c}元"},
+   series:[{type:"funnel",left:"16%",right:"16%",top:8,bottom:8,
+     minSize:"56%",maxSize:"100%",sort:"descending",gap:3,
+     label:{position:"inside",color:"#F1EFE8",fontFamily:"Noto Sans SC",fontSize:11,
+       formatter:function(p){return p.name+" "+p.value;}},
+     labelLine:{show:false},
+     data:fdata}]
+  };
+ },
+ c11:function(){
+  var colors=[RED,RED_DEEP,"#B76A56",INK_3,INK,INK_2];
+  return {
+   backgroundColor:"transparent",
+   tooltip:{trigger:"item",triggerOn:"click",confine:true,
+     backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+     formatter:function(p){
+       var tot=D.chart11.data.reduce(function(a,b){return a+b.value;},0);
+       return p.name+"："+p.value+"次（"+Math.round(p.value/tot*100)+"%）";}},
+   series:[{type:"treemap",roam:false,nodeClick:false,breadcrumb:{show:false},
+     label:{color:"#F1EFE8",fontFamily:"Noto Sans SC",fontSize:11},
+     data:D.chart11.data,
+     levels:[{color:colors,colorMappingBy:"value",
+       itemStyle:{borderColor:"#D8D3C4",borderWidth:2,gapWidth:3}}]}]
+  };
+ },
+ c6:function(){
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){
+     return p.name+"："+p.value+"个（"+Math.round(p.value/D.chart6.total*100)+"%）";}}),
+   grid:{left:48,right:20,top:25,bottom:40,containLabel:true},
+   xAxis:{type:"category",data:D.chart6.bands,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:10.5},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"岗位数"}),
+   series:[{type:"bar",barWidth:"48%",
+     data:D.chart6.vals.map(function(v,i){
+       return {value:v,itemStyle:{color:[RED,RED_DEEP,SLATE,INK][i],borderRadius:[3,3,0,0]}};}),
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:11,
+       formatter:function(p){
+         return UI.c6.pct?Math.round(p.value/D.chart6.total*100)+"%":p.value;}}}]
+  };
+ },
+ c7:function(){
+  if(!UI.c7.bar){
+   return {
+    backgroundColor:"transparent",
+    tooltip:{trigger:"item",triggerOn:"click",confine:true,
+      backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+      formatter:"{b}: {c}条 ({d}%)"},
+    legend:{bottom:0,type:"scroll",
+      textStyle:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}},
+    series:[{type:"pie",radius:["42%","68%"],center:["50%","45%"],
+      data:D.chart7.data,
+      color:[RED,RED_DEEP,SLATE,INK],
+      label:{show:true,color:RED,fontWeight:"bold",fontFamily:"Noto Sans SC",fontSize:11,
+        formatter:function(p){return p.name+"\n"+p.percent+"%";}},
+      labelLine:{show:true,lineStyle:{color:RED,width:1.5}},
+      itemStyle:{borderColor:"#D8D3C4",borderWidth:2}}]
+   };
+  }
+  var names=D.chart7.data.map(function(d){return d.name;}).reverse();
+  var vals=D.chart7.data.map(function(d){return d.value;}).reverse();
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+"："+p.value+"条";}}),
+   grid:{left:86,right:48,top:15,bottom:25,containLabel:true},
+   xAxis:axis(),
+   yAxis:{type:"category",data:names,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:11},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   series:[{type:"bar",data:vals,itemStyle:{color:RED,borderRadius:[0,3,3,0]},
+     label:{show:true,position:"right",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}}]
+  };
+ },
+ waterfall:function(){
+  var lbl=CUSTOM.waterfall.lbl,chg=CUSTOM.waterfall.chg;
+  var run=0,place=[],prom=[],ded=[],fin=[];
+  for(var i=0;i<chg.length;i++){
+   if(i===0){prom.push(chg[0]);place.push(0);ded.push("-");fin.push("-");}
+   else if(i===chg.length-1){
+     var take=chg[0]+chg.slice(1,chg.length-1).reduce(function(a,b){return a+(b||0);},0);
+     fin.push(take);place.push(0);prom.push("-");ded.push("-");
+   }else{
+     var c=chg[i];
+     if(c<0){ded.push(-c);place.push(run+c);prom.push("-");fin.push("-");}
+     else{prom.push(c);place.push(run);ded.push("-");fin.push("-");}
+     run+=c;
+   }
+  }
+  return {
+   backgroundColor:"transparent",
+   tooltip:{trigger:"axis",triggerOn:"click",confine:true,
+     backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"}},
+   grid:{left:48,right:18,top:25,bottom:40,containLabel:true},
+   xAxis:{type:"category",data:lbl,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:9.5,interval:0},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   yAxis:axis({name:"元"}),
+   series:[
+    {type:"bar",stack:"t",silent:true,itemStyle:{color:"transparent"},data:place},
+    {type:"bar",stack:"t",name:"承诺",itemStyle:{color:RED,borderRadius:[3,3,0,0]},data:prom,
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}},
+    {type:"bar",stack:"t",name:"扣减",itemStyle:{color:"#D46B4E",borderRadius:[2,2,0,0]},data:ded,
+     label:{show:true,position:"top",color:RED_DEEP,fontFamily:"Noto Sans SC",fontSize:10}},
+    {type:"bar",stack:"t",name:"到手",itemStyle:{color:INK,borderRadius:[3,3,0,0]},data:fin,
+     label:{show:true,position:"top",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10}}
+   ]
+  };
+ },
+ gapRank:function(){
+  var g=CUSTOM.gapRank;
+  if(!g.mode){
+   return {
+    backgroundColor:"transparent",
+    tooltip:{trigger:"axis",triggerOn:"click",confine:true,
+      backgroundColor:INK,textStyle:{color:"#F1EFE8",fontFamily:"Noto Sans SC"},
+      formatter:function(p){
+       var s=p[0].name;
+       for(var i=0;i<p.length;i++){s+="<br/>"+p[i].marker+p[i].seriesName+"："+p[i].value+"元";}
+       s+="<br/>落差率："+grGap(p[0].dataIndex)+"%";
+       return s;}},
+    legend:{data:["广告承诺","官方基准"],top:0,
+      textStyle:{color:INK_2,fontFamily:"Noto Sans SC"}},
+    grid:{left:48,right:20,top:40,bottom:40,containLabel:true},
+    xAxis:{type:"category",data:g.names,
+      axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:10.5},
+      axisLine:{lineStyle:{color:INK_LT}}},
+    yAxis:axis({name:"元/月"}),
+    series:[
+     {name:"广告承诺",type:"bar",data:g.prom,itemStyle:{color:RED,borderRadius:[3,3,0,0]}},
+     {name:"官方基准",type:"bar",data:g.base,itemStyle:{color:SLATE,borderRadius:[3,3,0,0]}}
+    ]
+   };
+  }
+  var gaps=g.names.map(function(n,i){return grGap(i);});
+  var names=g.names.slice().reverse();
+  var vals=gaps.slice().reverse();
+  return {
+   backgroundColor:"transparent",
+   tooltip:darkTip({formatter:function(p){return p.name+" 落差率："+p.value+"%";}}),
+   grid:{left:86,right:54,top:15,bottom:25,containLabel:true},
+   xAxis:axis({name:"落差率%",max:100}),
+   yAxis:{type:"category",data:names,
+     axisLabel:{color:INK_2,fontFamily:"Noto Sans SC",fontSize:11},
+     axisLine:{lineStyle:{color:INK_LT}}},
+   series:[{type:"bar",data:vals,itemStyle:{color:RED,borderRadius:[0,3,3,0]},
+     label:{show:true,position:"right",color:INK_2,fontFamily:"Noto Sans SC",fontSize:10,
+       formatter:"{c}%"}}]
+  };
+ }
+};
+function grGap(i){
+ var g=CUSTOM.gapRank;
+ return Math.round((g.prom[i]-g.base[i])/g.prom[i]*100);
+}
+function draw(id){
+ var c=getChart(id);
+ if(!c)return;
+ c.setOption(RENDER[id](),true);
+}
+
+/* ===== 引导按钮 ===== */
+function stepHL(id,dataLen,seriesIndex){
+ seriesIndex=seriesIndex||0;
+ var st=STEP[id]=STEP[id]||{i:-1};
+ var c=getChart(id);
+ if(st.i>=0)c.dispatchAction({type:"downplay",seriesIndex:seriesIndex,dataIndex:st.i});
+ st.i++;
+ if(st.i>=dataLen){st.i=-1;return;}
+ c.dispatchAction({type:"highlight",seriesIndex:seriesIndex,dataIndex:st.i});
+ c.dispatchAction({type:"showTip",seriesIndex:seriesIndex,dataIndex:st.i});
+}
+function g_c1(){
+ var c=getChart("c1"),st=UI.c1;
+ if(st.i>=0)c.dispatchAction({type:"downplay",seriesIndex:0,dataIndex:st.i});
+ st.i++;
+ if(st.i>=4){st.i=-1;return;}
+ c.dispatchAction({type:"highlight",seriesIndex:0,dataIndex:st.i});
+ c.dispatchAction({type:"showTip",seriesIndex:0,dataIndex:st.i});
+}
+function g_c2(){
+ var st=UI.c2;st.mode=(st.mode+1)%3;
+ var sel;
+ if(st.mode===0)sel={"薪资下限(起薪)":true,"薪资上限":true};
+ if(st.mode===1)sel={"薪资下限(起薪)":true,"薪资上限":false};
+ if(st.mode===2)sel={"薪资下限(起薪)":false,"薪资上限":true};
+ getChart("c2").setOption({legend:{selected:sel}});
+ var b=document.querySelector('[data-g="c2"]');
+ b.textContent=["切换：起薪 / 上限","只看：起薪(下限)","只看：薪资上限"][st.mode];
+}
+var GUIDE={
+ c1:g_c1,
+ c2:g_c2,
+ c8:function(){UI.c8.line=!UI.c8.line;draw("c8");},
+ c4:function(){UI.c4.cnt=!UI.c4.cnt;draw("c4");},
+ c3:function(){stepHL("c3",8);},
+ c13:function(){stepHL("c13",2);},
+ c9:function(){stepHL("c9",2);},
+ c5:function(){stepHL("c5",9);},
+ c10:function(){stepHL("c10",6);},
+ c12:function(){stepHL("c12",5);},
+ c11:function(){stepHL("c11",6);},
+ c6:function(){UI.c6.pct=!UI.c6.pct;draw("c6");},
+ c7:function(){
+   UI.c7.bar=!UI.c7.bar;draw("c7");
+   var b=document.querySelector('[data-g="c7"]');
+   b.textContent=UI.c7.bar?"切换为环形图":"切换为条形图";},
+ waterfall:function(){
+   var st=STEP.waterfall=STEP.waterfall||{i:-1};
+   st.i++;
+   if(st.i>=8){st.i=-1;return;}
+   getChart("waterfall").dispatchAction({type:"showTip",seriesIndex:0,dataIndex:st.i});},
+ gapRank:function(){
+   CUSTOM.gapRank.mode=(CUSTOM.gapRank.mode+1)%2;draw("gapRank");
+   var b=document.querySelector('[data-g="gapRank"]');
+   b.textContent=CUSTOM.gapRank.mode?"切换：金额视图":"切换：落差率";}
+};
+
+/* ===== 数据编辑弹窗 ===== */
+var DKEY={c1:"chart1",c2:"chart2",c8:"chart8",c4:"chart4",c3:"chart3",
+ c13:"chart13",c9:"chart9",c5:"chart5",c10:"chart10",c12:"chart12",
+ c11:"chart11",c6:"chart6",c7:"chart7"};
+var editTarget=null;
+function openModal(id){
+ editTarget=id;
+ var obj=(id==="waterfall"||id==="gapRank")?CUSTOM[id]:D[DKEY[id]];
+ document.getElementById("modalTitle").textContent="编辑图表数据 · "+id;
+ document.getElementById("modalText").value=JSON.stringify(obj,null,2);
+ document.getElementById("modalErr").style.display="none";
+ document.getElementById("modalMask").classList.add("show");
+}
+function closeModal(){document.getElementById("modalMask").classList.remove("show");}
+function applyChartData(){
+ var txt=document.getElementById("modalText").value,parsed;
+ try{parsed=JSON.parse(txt);}
+ catch(e){
+   var er=document.getElementById("modalErr");
+   er.style.display="block";
+   er.textContent="JSON 格式有误："+e.message;
+   return;}
+ if(editTarget==="waterfall"||editTarget==="gapRank")CUSTOM[editTarget]=parsed;
+ else D[DKEY[editTarget]]=parsed;
+ closeModal();
+ draw(editTarget);
+ scheduleSave();
+}
+
+/* ===== 图片更换 ===== */
+var replaceTarget=null;
+function compress(file,cb){
+ var im=new Image();
+ im.onload=function(){
+   var sc=Math.min(1,1280/im.width);
+   var w=Math.round(im.width*sc),h=Math.round(im.height*sc);
+   var cv=document.createElement("canvas");cv.width=w;cv.height=h;
+   cv.getContext("2d").drawImage(im,0,0,w,h);
+   cb(cv.toDataURL("image/jpeg",0.82));
+ };
+ im.src=URL.createObjectURL(file);
+}
+document.querySelectorAll('img[data-img]').forEach(function(im){
+ im.title="双击可更换图片";
+ im.addEventListener("dblclick",function(){
+  replaceTarget=im.getAttribute("data-img");
+  document.getElementById("filePick").click();
+ });
+});
+document.getElementById("filePick").addEventListener("change",function(e){
+ var f=e.target.files[0];
+ if(!f)return;
+ compress(f,function(dataUrl){
+  var im=document.querySelector('img[data-img="'+replaceTarget+'"]');
+  if(im)im.src=dataUrl;
+  e.target.value="";
+  scheduleSave();
+ });
+});
+
+/* ===== 计算器 ===== */
+function calc(){
+ var m=+document.getElementById("m").value||0;
+ var h=+document.getElementById("h").value||0;
+ var r=+document.getElementById("r").value||0;
+ var d=+document.getElementById("d").value||0;
+ var hours=(30-r)*h;
+ var take=m-d;
+ document.getElementById("nom").textContent=(hours?m/hours:0).toFixed(1)+"元";
+ document.getElementById("real").textContent=(hours?take/hours:0).toFixed(1)+"元";
+ document.getElementById("take").textContent=take.toFixed(0)+"元";
+}
+
+/* ===== 自动保存 ===== */
+var STORE_KEY="bluecollar_edits_v5";
+function editableEls(){return Array.prototype.slice.call(document.querySelectorAll("[contenteditable]"));}
+var saveTimer=null;
+function scheduleSave(){
+ clearTimeout(saveTimer);
+ saveTimer=setTimeout(function(){
+  try{
+   var payload={text:{},imgs:{},D:D,CUSTOM:CUSTOM,UI:UI};
+   editableEls().forEach(function(el){
+     payload.text[el.getAttribute("data-edkey")]=el.innerHTML;});
+   document.querySelectorAll('img[data-img]').forEach(function(im){
+     payload.imgs[im.getAttribute("data-img")]=im.src;});
+   localStorage.setItem(STORE_KEY,JSON.stringify(payload));
+  }catch(e){}
+ },450);
+}
+function applyRestore(p){
+ if(!p)return;
+ if(p.D){for(var k in p.D){D[k]=p.D[k];}}
+ if(p.CUSTOM){CUSTOM=p.CUSTOM;}
+ if(p.UI){UI=p.UI;}
+ if(p.text){
+  editableEls().forEach(function(el){
+   var k=el.getAttribute("data-edkey");
+   if(Object.prototype.hasOwnProperty.call(p.text,k))el.innerHTML=p.text[k];});
+ }
+ if(p.imgs){
+  Object.keys(p.imgs).forEach(function(k){
+   var im=document.querySelector('img[data-img="'+k+'"]');
+   if(im)im.src=p.imgs[k];});
+ }
+}
+
+/* ===== 隐藏平台注入标识（兜底清理） ===== */
+(function(){
+ function kill(){
+  var sel='[data-custom-element*="watermark"],.watermark-root';
+  document.querySelectorAll(sel).forEach(function(n){try{n.parentNode&&n.parentNode.removeChild(n);}catch(e){}});
+ }
+ kill();
+ try{new MutationObserver(kill).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
+})();
+
+/* ===== 启动 ===== */
+(function boot(){
+ var p=null;
+ try{p=JSON.parse(localStorage.getItem(STORE_KEY)||"null");}catch(e){}
+ applyRestore(p);
+ Object.keys(RENDER).forEach(function(id){
+  draw(id);
+  var el=document.getElementById(id);
+  if(el){
+   new ResizeObserver(function(){
+    var c=echarts.getInstanceByDom(el);
+    if(c)c.resize();
+   }).observe(el);
+  }
+ });
+ ["m","h","r","d"].forEach(function(i){
+  document.getElementById(i).addEventListener("input",function(){calc();scheduleSave();});
+ });
+ calc();
+ document.querySelectorAll("[data-g]").forEach(function(b){
+  b.addEventListener("click",function(){
+   var id=b.getAttribute("data-g");
+   if(GUIDE[id])GUIDE[id](b);
+   scheduleSave();
+  });
+ });
+ /* 双面卡：点专用"翻面"链接，不影响文字编辑 */
+ document.querySelectorAll("[data-flip]").forEach(function(b){
+  b.addEventListener("click",function(e){
+   e.stopPropagation();
+   document.getElementById(b.getAttribute("data-flip")).classList.toggle("on");
+  });
+ });
+ /* 双击图表可编辑数据（隐藏交互，避免按钮） */
+ document.querySelectorAll(".chart").forEach(function(el){
+  el.title="双击可编辑该图表数据";
+  el.addEventListener("dblclick",function(){openModal(el.id);});
+ });
+ document.addEventListener("input",function(e){
+  if(e.target&&e.target.matches&&e.target.matches("[contenteditable]"))scheduleSave();
+ });
+})();
+</script>
+
+
+</body></html>
